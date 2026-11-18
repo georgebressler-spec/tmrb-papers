@@ -1,0 +1,8 @@
+source: GWTC-5.0: Tests of General Relativity, arXiv:2607.19293v1 (PDF sha256 4ab5df879daa2f4acd2d9fac32e64f5daf78d8fddd73ba5d76ecc5a2047ab101). Definition, eq. (18): tau_lm0 = tau_lm0^GR (1 + dtau_lm0). pSEOBNRv5PHM (IMR-based), so t0 = 0 by the registered rule. Ringdown-only analyses (Sec. 7.1) report no combined dtau_220.
+- pSEOBNR, all events, multiplied posteriors (eq. 21, p. 23): dtau median +0.070, 90% [+0.020, +0.130]; TMRB -0.095 (band -0.126..-0.070); common deviation: True -> EXCLUDED
+- pSEOBNR, all events, hierarchical mean mu_dtau (eq. 22, p. 23): dtau median +0.090, 90% [+0.030, +0.160]; TMRB -0.095 (band -0.126..-0.070); common deviation: False -> EXCLUDED
+- pSEOBNR, all events, hierarchical population marginal (eq. 22, p. 23): dtau median +0.090, 90% [-0.010, +0.220]; TMRB -0.095 (band -0.126..-0.070); common deviation: False -> EXCLUDED
+- pSEOBNR, five highest-SNR events, multiplied (p. 24): dtau median +0.020, 90% [-0.060, +0.100]; TMRB -0.095 (band -0.126..-0.070); common deviation: True -> EXCLUDED
+- pSEOBNR, five highest-SNR events without GW250114, multiplied (p. 24): dtau median +0.080, 90% [-0.040, +0.220]; TMRB -0.095 (band -0.126..-0.070); common deviation: True -> EXCLUDED
+- pSEOBNR, all events without GW250114, multiplied (p. 24): dtau median +0.110, 90% [+0.040, +0.200]; TMRB -0.095 (band -0.126..-0.070); common deviation: True -> EXCLUDED
+PRIMARY VERDICT: pSEOBNR, all events, multiplied posteriors (eq. 21, p. 23) -> EXCLUDED
