@@ -195,7 +195,11 @@ two sensitivity scales: GRACE/GRACE-FO mascon gravity (about
 $4\times10^{-9}~\mathrm{m\,s^{-2}}$, roughly $10^{6}$ times above the framework's predicted
 quasi-static bulk-gravity-leakage amplitude), and a GWOSC O3a
 narrowband sensitivity floor that lies below that amplitude but applies only to a
-component near 100~Hz, which the prediction does not contain.
+component near 100~Hz, which the prediction does not contain. The ringdown
+prediction was tested against published LIGO--Virgo--KAGRA data by the X24si method
+(registered with an outside clock before any result was read, and run once): GWTC-5.0
+gives $\delta\hat\tau_{220} = 0.07^{+0.06}_{-0.05}$, which excludes the predicted
+shortening, so under its stated assumptions that prediction is disfavoured.
 
 \smallskip
 \noindent\textbf{Keywords:} black-hole information paradox, soft hair, BMS symmetry,
@@ -292,61 +296,42 @@ relevant argument is now inline at Eq.~\eqref{eq:N_hair}.
 to latest version) throughout.
 
 \smallskip
-\noindent\textbf{Changes in v4:}
-\textit{(i)}~Weights made $\mathbb{Z}_9$-symmetric (the periodised Gaussian,
-$w_{9-n} = w_n$), which makes the DFT fixed-point claim exact; $Z_{\rm tors} = 3$ to
-about $10^{-12}$ by Poisson summation, so the boundary term is $\ln 3$ and
-$\Delta S_{\rm tors} = 9\ln 9 + \ln 3 \approx 20.874$ (v3: one-sided weights, ${\approx}2$,
-$\ln 2$, 20.468).
-\textit{(ii)}~Torsion cell area corrected to $4G_4\ln 9 \approx 8.79\,\ell_{\rm Pl}^2$ (was 9.66).
-\textit{(iii)}~Sideband weights recomputed: $w_0 + 2w_1 \approx 80\%$, $|n|\le 2$ about $97\%$ (v3 stated ${>}92\%$ for $n=0,1$).
-\textit{(iv)}~Firewall section rewritten: the state Eq.~\eqref{eq:firewall_state} leaves the
-Hawking pair unentangled, and monogamy constrains multipartite states; firewall avoidance
-is now Gap~10.
-\textit{(v)}~The $\mathbb{Z}_9$ conservation law is stated as a necessary condition
-carrying at most $\ln 9$ nats; the unitary map is now Gap~11.
-\textit{(vi)}~Orbit counting for $9\ln 9$ and the 45-primary parafermion partition
-function added as Gaps~12 and~13.
-\textit{(vii)}~Remnant argument corrected: the size-independent term leaves about 21~nats as $A\to 0$, so only information-carrying remnants are excluded (Gap~14).
-\textit{(viii)}~A broken section reference in the v3 change list repaired.
-\textit{(ix)}~Abstract, introduction and conclusion reworded from ``resolves'' to
-``proposes a resolution'', matching the open gaps.
-\textit{(x)}~Consistency pass: nine sectors per torsion cell (not per Planck area)
-throughout; Term~2 of \S\ref{sec:entropy} and Gap~8 use the v3 cell count; Gap~9 no
-longer claims sufficiency; the appendix is labelled as the v1/v2 count; footer DOI set to
-the concept DOI; two arithmetic and citation fixes.
-\textit{(xi)}~The GWOSC limit lies ${\sim}39\times$ below the predicted $\Delta g$ and is
-now stated to bound only a ${\sim}100$~Hz component; loop bound corrected and
-$\varphi^{-N_*}$ marked as not derived (Gap~15); torsion classes attributed to
-$H^3$ (Dijkgraaf--Witten), since Vafa's $H^2$ is trivial for $\mathbb{Z}_9$; modular
-invariance no longer called a unitarity criterion; $\tau$ made imaginary; the
-quantum-dimension comparison corrected ($\mathcal{D} = 3$); the entropy gap marked as not
-yet observable (Gap~16); figures 1, 2 and 4 regenerated.
-\textit{(xii)}~The sideband comb is shown to be unresolved (spacing 0.094 line widths at
-every mass); the prediction is restated as a mass-independent shortening of the ringdown
-damping time (4.6\%, 9.9\% at spin 0.7), with the time dependence and damping assumptions
-as Gaps~17 and~18, and Fig.~4 redrawn with the true line width. The one-loop logarithm
-$c_{\log}\ln(A/G_4)$ is added to the entropy, so $\Delta S_{\rm tors}$ leads only if Gap~15
-closes. Smaller fixes: prediction count; Gap~5 (45 primaries); GRACE residuals withheld;
-Fig.~3 and~5 captions; charges defined modulo $2\pi$; units of $G_4/G_{11}$; $T_0$ marked
-as input; GWOSC segment contains no merger; Fateev--Zamolodchikov reference corrected.
-\textit{(xiii)}~Ringdown shift confirmed by three independent methods and stated for a fit
-from the peak, with its growth for later start times; the logarithm's dominance stated in
-magnitude ($|c_{\log}| > 0.114$); the GWOSC weights described as the script used them
-($n=-4,\dots,4$), and the 4531~s stated as the longest gap-free stretch of the 8192~s span.
-\textit{(xiv)}~Sen's coefficient stated ($c_{\log} = 77/90$, pure gravity); the GWOSC result
-relabelled as a sensitivity floor (recomputed from the run's measured noise level:
-$1.602\times10^{-16}~\mathrm{m\,s^{-2}}$).
-\textit{(xv)}~GRACE paragraph rewritten from the 2026-04-26 run itself: its zero anomaly and
-$z$-scores follow from removing the fitted mean, so the run does not test the prediction;
-$4\times10^{-9}~\mathrm{m\,s^{-2}}$ is stated as the 1~cm water-equivalent scale, not an
-upper limit; the per-coordinate slope count and the coordinate-21 slope are withdrawn
-until the run is repeated; the synthetic $z$ histogram is removed from Fig.~5 and the
-run's own output is shown as Fig.~6.
-\textit{(xvi)}~Ringdown prediction stated as a function of remnant spin and fit start time
-(Table~\ref{tab:ringdown_spin}, exact Kerr frequencies): about 10--18\% for typical
-remnants, 4.4\% for a non-spinning remnant fitted from the peak; a comparison with
-existing LIGO--Virgo--KAGRA ringdown tests is proposed.
+\noindent\textbf{Changes in v4 (from v3, the last version on Zenodo):}
+\begin{enumerate}[leftmargin=*, label=\textit{(\roman*)}, itemsep=1pt, topsep=2pt]
+  \item \textbf{Ringdown prediction tested against published data and disfavoured, by
+    the X24si method.} Before any result was read, a test of this paper's ringdown
+    prediction against LIGO--Virgo--KAGRA data was registered with an outside clock (a
+    timestamped GitHub commit): the claim, the data source, the decision rule and a frozen
+    decision script. Run once on GWTC-5.0, the combined result
+    $\delta\hat\tau_{220} = 0.07^{+0.06}_{-0.05}$ excludes the predicted shortening
+    ($-0.095$; band $-0.126$ to $-0.070$), and all five secondary combinations agree. The
+    result stands as run (Section~\ref{sec:x24si_test}).
+  \item \textbf{Entropy correction revised.} The weights are made $\mathbb{Z}_9$-symmetric,
+    so $\ln Z_{\rm tors} = \ln 3$ and $\Delta S_{\rm tors} = 9\ln 9 + \ln 3 \approx 20.874$
+    (v3: $\ln 2$, 20.468). The one-loop logarithm $c_{\log}\ln(A/G_4)$, with
+    $c_{\log} = 77/90$, is added; it exceeds $\Delta S_{\rm tors}$ unless Gap~15 closes.
+  \item \textbf{Claims matched to what is shown.} ``Resolves'' becomes ``proposes a
+    resolution''. Firewall avoidance, the unitary map, orbit counting, the 45-primary
+    partition function, the remnant endpoint, the golden-ratio loop factor, the entropy-gap
+    observable and the ringdown assumptions are listed as open Gaps~10--18. Only
+    information-carrying remnants are excluded.
+  \item \textbf{Ringdown prediction restated.} The nine sidebands are unresolved (0.094
+    line widths at every mass); the prediction is a shortening of the damping time, given
+    by remnant spin and fit start time in Table~\ref{tab:ringdown_spin} (exact Kerr
+    frequencies).
+  \item \textbf{Observational sections rewritten from the analysis scripts.} The GWOSC
+    result is a sensitivity floor ($1.6\times10^{-16}~\mathrm{m\,s^{-2}}$, for a
+    ${\sim}100$~Hz component only). The GRACE run of 2026-04-26 is described as done: its
+    zero result follows from its method, and $4\times10^{-9}~\mathrm{m\,s^{-2}}$ is the
+    1~cm water scale. A synthetic histogram is removed from Fig.~5; the run's own output
+    is Fig.~6.
+  \item \textbf{Corrections.} Torsion cell area $8.79\,\ell_{\rm Pl}^2$; sideband weights;
+    loop bound; torsion classes in $H^3$ (Dijkgraaf--Witten); modular invariance as a
+    consistency condition; imaginary $\tau$; quantum dimension 3; charges modulo $2\pi$;
+    footer DOI set to the concept DOI; references corrected and added.
+  \item The full revision trail (r1--r9), audits, registration files and analysis scripts
+    are included in the Zenodo record.
+\end{enumerate}
 
 % ─────────────────────────────────────────────────────────────────────────────
 \needspace{6\baselineskip}
@@ -935,9 +920,8 @@ between the waveform and the best single mode is $6.0\times10^{-5}$
 visible at ringdown signal-to-noise ratio $\rho \approx 90$ ($\approx 44$), from
 $\rho^2(1-\mathcal{O}) \approx 1/2$. The testable prediction is a mass-independent
 shortening of the $\ell = m = 2$ damping time relative to the GR value inferred from
-the inspiral. A shortening of 10--18\% may already be within reach of combined
-ringdown tests of general relativity on existing LIGO--Virgo--KAGRA catalogues; such a
-comparison, set up in advance and run once, is proposed here, not claimed.
+the inspiral. Section~\ref{sec:x24si_test} tests it against published
+LIGO--Virgo--KAGRA results.
 (Computed; scripts \texttt{ringdown\_signature.py} and \texttt{kerr\_spin\_table.py}
 in the Zenodo record.)
 
@@ -963,14 +947,57 @@ damping time is 4.4--4.8\% shorter (spinning remnants: Table~\ref{tab:ringdown_s
 This supersedes both the naive ``QNM frequency shift'' and the resolved-comb
 reading of v1--v3: the observable is not nine separate lines but the shortened,
 slightly non-exponential decay above, set by $\kappa_{\mathrm{CE}}$ and the mode's
-quality factor, testable at Einstein Telescope and Cosmic Explorer on the
-$\sim 2035$ timeline. Full membrane-paradigm derivation of the
+quality factor. Under the assumptions of Gaps~17 and~18 it is already
+disfavoured by GWTC-5.0 (Section~\ref{sec:x24si_test}). Full membrane-paradigm derivation of the
 horizon-fluid stress tensor under the $\mathbb{Z}_9$ identification — including
 the discrete Damour--Navier--Stokes equation and the $\mathbb{Z}_9$ correction
 to the KSS shear-viscosity bound $\eta/s = 1/4\pi$~\cite{KSS2005} — is
 deferred to a companion paper; the present work treats the sideband comb as
 a kinematical consequence of the soft-hair sectors of Section~\ref{sec:hair}
 and does not require it.
+
+\subsection{Test against published data by the X24si method}
+\label{sec:x24si_test}
+
+The damping-time prediction was tested against published LIGO--Virgo--KAGRA results
+with the X24si method~\cite{BresslerX24si2026}, a recursive human-in-the-loop protocol
+in which each step is fixed before the next can be seen:
+\begin{enumerate}[leftmargin=*, label=\arabic*.]
+  \item \textbf{Claim, pinned.} $\delta\hat\tau_{220} \equiv \tau_{\rm fit}/\tau_{\rm GR} - 1
+    = -0.095$ for remnant spin 0.69 and a fit from the peak, with a band of $-0.126$ to
+    $-0.070$ for spins 0.50--0.80 (Table~\ref{tab:ringdown_spin}), as a deviation common to
+    all events. Pinned to revision r8 of this paper and to a frozen decision script,
+    identified by its SHA-256 hash; each input is labelled as computed or read from the
+    literature.
+  \item \textbf{Criteria first.} Before any damping-time result was read (the sources
+    were chosen from titles alone), the registration fixed the source order (GWTC-5.0,
+    then GWTC-4.0 remnant tests, then GWTC-3); the primary analysis (a common-deviation
+    combination of an inspiral--merger--ringdown analysis, mapped to a fit from the peak,
+    which is the mapping most favourable to the prediction); four outcomes (EXCLUDED if the
+    whole band lies outside the 90\% credible interval; DISFAVORED; CONSISTENT, NOT
+    DISCRIMINATING; FAVORED OVER GR); and what each outcome would mean for this paper.
+  \item \textbf{Outside clock.} The registration was committed and pushed to GitHub
+    (commit \texttt{76d92c7}, 16:06~UTC, 18 November 2026) before the source was opened.
+    The transcribed numbers were committed (\texttt{d590909}) before the script ran.
+  \item \textbf{Instrument, run once.} The frozen script compared the transcribed
+    intervals with the registered prediction, once. Failures stand.
+  \item \textbf{Human decision.} The author decided how this paper reports the outcome;
+    the decision is recorded as a decision, not as evidence.
+\end{enumerate}
+
+\noindent\textbf{Result.} For the pSEOBNRv5PHM analysis with posteriors multiplied
+across all events, GWTC-5.0 reports $\delta\hat\tau_{220} = 0.07^{+0.06}_{-0.05}$ at
+90\% credibility~\cite{GWTC5TGR}. The whole predicted band lies below this interval:
+\textbf{EXCLUDED}. The five secondary combinations in the source (the hierarchical mean
+and population, the five highest-SNR events with and without GW250114, and all events
+without GW250114) are also excluded. The closest is the five highest-SNR subset,
+$0.02 \pm 0.08$, whose lower bound of $-0.06$ lies just above the band's edge. Where the
+data depart from GR, the damping time is longer, not shorter. Under the assumptions of
+Gaps~17 and~18 the ringdown prediction is therefore disfavoured by published data. The
+LIGO--Virgo--KAGRA waveform model is not the TMRB waveform, so the mapping is approximate;
+it was fixed in advance as the one most favourable to the prediction. The registration,
+transcribed input, frozen script, output and result record are included in the Zenodo
+record.
 
 % ─────────────────────────────────────────────────────────────────────────────
 \needspace{6\baselineskip}
@@ -1079,12 +1106,16 @@ In the tradition of the TMRB series, the following gaps are documented honestly:
 
   \item \textbf{Time dependence of the torsion modulation (open, added in v4):}
     Frequency sidebands need the modulation $\delta V$ to advance in time at rate
-    $\Delta f_{\rm tors}$; the potential as written varies only with angle.
+    $\Delta f_{\rm tors}$; the potential as written varies only with angle. The
+    prediction made under this assumption is disfavoured by the test of
+    Section~\ref{sec:x24si_test}.
 
   \item \textbf{Sideband damping and spin (open, added in v4):} The ringdown
     numbers of Section~\ref{sec:fluid_gravity} assume every sideband shares the
     $\ell = m = 2$ damping time; they use exact Kerr frequencies for spins 0--0.9
     (Table~\ref{tab:ringdown_spin}). Unequal sideband damping and overtones are open.
+    The prediction made under this assumption is disfavoured by the test of
+    Section~\ref{sec:x24si_test}.
 \end{enumerate}
 
 % ─────────────────────────────────────────────────────────────────────────────
@@ -1113,8 +1144,8 @@ Ringdown damping time
     sidebands, spacing $0.094$ line widths, set by the $\kappa_{\rm CE}$ of the
     celestial Mellin comb~\cite{BresslerCH2026,BresslerMellin2026}
     (Section~\ref{sec:fluid_gravity}, Figure~\ref{fig:chladni})
-  & Einstein Telescope, Cosmic Explorer
-  & $\sim$2035 \\
+  & Tested on GWTC-5.0~\cite{GWTC5TGR} (X24si, Section~\ref{sec:x24si_test})
+  & Excluded (2026) \\
 Ringdown shape
   & Non-exponential decay; mismatch $6.0\times10^{-5}$ to a single mode,
     visible at ringdown SNR ${\gtrsim}\,90$ (44 at spin 0.7)
@@ -1289,10 +1320,11 @@ spectrum~\cite{BresslerCH2026}.  Section~\ref{sec:fluid_gravity} closes the
 UV-to-IR loop through a structural identity: the same parameter $\kappa_{\rm CE}$
 that governs the celestial conformal-weight comb at $\mathscr{I}^+$ also fixes
 the horizon QNM sideband spacing.  The resulting nine sidebands are too close to
-resolve (0.094 line widths at any mass); their signature is a mass-independent
-shortening of the ringdown damping time by about 10--18\% for typical remnants
-(Table~\ref{tab:ringdown_spin}), the framework's most
-direct gravitational-wave test at Einstein Telescope and Cosmic Explorer.  The GRACE scale Eq.~\eqref{eq:grace_ul} lies about $10^{6}$ times above the
+resolve (0.094 line widths at any mass). Their predicted signature, a
+mass-independent shortening of the ringdown damping time by about 10--18\% for typical
+remnants (Table~\ref{tab:ringdown_spin}), was tested by the X24si method against
+GWTC-5.0 and is excluded under the assumptions of Gaps~17 and~18
+(Section~\ref{sec:x24si_test}).  The GRACE scale Eq.~\eqref{eq:grace_ul} lies about $10^{6}$ times above the
 predicted bulk-gravity-leakage amplitude at the 45 hotspot
 coordinates~\cite{BresslerBGL2026}, so GRACE cannot test it; the GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} applies to
 a $\sim 100$~Hz component of it, and together they define the sensitivity floor for
@@ -1583,6 +1615,17 @@ rather than removing entanglement degeneracy.
   \textit{Einstein Equations from Prismatic Curvature},
   Zenodo (2026).
   \href{https://doi.org/10.5281/zenodo.20146627}{doi:10.5281/zenodo.20146627}
+
+\bibitem{BresslerX24si2026}
+  G.~Bressler,
+  \textit{X24si},
+  \href{https://x24si.com}{https://x24si.com} (2026).
+
+\bibitem{GWTC5TGR}
+  A.~G.~Abac et al.\ (LIGO Scientific, Virgo and KAGRA Collaborations),
+  \textit{GWTC-5.0: Tests of General Relativity},
+  arXiv:2607.19293 (2026).
+  \href{https://arxiv.org/abs/2607.19293}{arXiv:2607.19293}
 
 \bibitem{BresslerSurvey2026}
   G.~Bressler,
