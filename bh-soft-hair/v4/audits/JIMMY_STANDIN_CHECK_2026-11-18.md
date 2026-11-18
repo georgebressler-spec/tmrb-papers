@@ -2,7 +2,7 @@
 
 The checklist from `AUDIT_4` §3, worked through by Claude. Jimmy should still re-check it when he is back: one model family checking itself is coordination, not corroboration.
 
-## 1. Ringdown derivation (*execution*: `jimmy_check_kerr_exact.py`, exact Kerr QNMs from Leaver's continued fraction via the `qnm` package)
+## 1. Ringdown derivation (*execution*: `kerr_spin_table.py` (in `v4/analysis/ringdown/`), exact Kerr QNMs from Leaver's continued fraction via the `qnm` package)
 - **Identities:** Δf/FWHM = κQ/9 and 2πΔfτ = 2κQ/9 hold exactly, so the result is mass-independent for a given spin.
 - **The BCW fits are accurate:** at spin 0.7 the exact ωM is 0.53260 − 0.08079i, against 0.5350 − 0.0814i from the fits (0.4% and 0.7% off).
 - **The fitted damping-time shift (least squares on the real strain, free amplitude, phase, f and τ):**
