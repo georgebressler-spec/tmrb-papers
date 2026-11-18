@@ -1,0 +1,98 @@
+--- bh_soft_hair_v4_r5.tex	2026-11-18 14:43:23.591201521 +0000
++++ bh_soft_hair_v4_r6.tex	2026-11-18 15:22:08.139107474 +0000
+@@ -193,7 +193,7 @@
+ has no observable yet), together with
+ quantitative upper limits: a GRACE/GRACE-FO mascon search consistent with the
+ framework's predicted quasi-static bulk-gravity-leakage amplitude, and a GWOSC O3a
+-narrowband search whose limit lies below that amplitude but bounds only a
++narrowband sensitivity floor that lies below that amplitude but applies only to a
+ component near 100~Hz, which the prediction does not contain.
+ 
+ \smallskip
+@@ -333,6 +333,9 @@
+ from the peak, with its growth for later start times; the logarithm's dominance stated in
+ magnitude ($|c_{\log}| > 0.114$); the GWOSC weights described as the script used them
+ ($n=-4,\dots,4$), and the 4531~s stated as the longest gap-free stretch of the 8192~s span.
++\textit{(xiv)}~Sen's coefficient stated ($c_{\log} = 77/90$, pure gravity); the GWOSC result
++relabelled as a sensitivity floor (recomputed from the run's measured noise level:
++$1.602\times10^{-16}~\mathrm{m\,s^{-2}}$).
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{6\baselineskip}
+@@ -624,12 +627,14 @@
+ For conciseness we write $\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 3 \approx 20.874$
+ as the total size-independent torsion correction.  The term
+ $c_{\log}\ln(A/G_4)$ is the standard one-loop logarithm, Eq.~\eqref{eq:log_loop},
+-with $c_{\log}$ a pure number of order one~\cite{Sen2012}; for a $10\,M_\odot$ hole
+-$\ln(A/G_4) \approx 183$, so it is of order $10^2$ nats and exceeds $\Delta S_{\rm tors}$ in magnitude
+-whenever $|c_{\log}| > 0.114$ (its sign depends on the field content).
++with $c_{\log} = 77/90 \approx 0.86$ for a Schwarzschild hole in pure four-dimensional
++gravity (Sen's $(212/45 - 3)\ln a$ with $A \propto a^2$; massless matter fields change
++it)~\cite{Sen2012}. For a $10\,M_\odot$ hole $\ln(A/G_4) \approx 183$, so the logarithm
++is about 157 nats, roughly 7.5 times $\Delta S_{\rm tors}$; it would exceed
++$\Delta S_{\rm tors}$ for any $|c_{\log}| > 0.114$.
+ If the proposed factor $\varphi^{-N_*}$ of Section~\ref{sec:loop} holds, at
+ $N_* = d_{\rm opt} = 9$ it multiplies the logarithm by $\varphi^{-9} \approx 0.013$,
+-bringing it to about $2.4\,c_{\log}$ nats. $\Delta S_{\rm tors}$ is therefore the
++bringing it to about 2.1 nats. $\Delta S_{\rm tors}$ is therefore the
+ leading correction to the area law only if Gap~15 closes.  The Euclidean black-hole
+ background is a non-degenerate saddle point of the TMRB action — i.e.\ the
+ second variation is positive-definite in the torsion sector.  Verifying this
+@@ -1100,16 +1105,16 @@
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{8\baselineskip}
+-\subsection{Current Observational Constraints: GWOSC O3a and GRACE-FO Null Results}
++\subsection{Current Observational Constraints: GWOSC O3a Sensitivity Floor and GRACE-FO Null Results}
+ \label{sec:current_constraints}
+ 
+-Two independent null searches have been performed against existing data products,
+-targeting the predicted bulk-gravity-leakage amplitude $\Delta g_{\mathrm{TMRB}} = 6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ at the
++A sensitivity estimate (GWOSC) and a null search (GRACE) have been made against
++existing data products, targeting the predicted bulk-gravity-leakage amplitude $\Delta g_{\mathrm{TMRB}} = 6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ at the
+ 45 $\mathbb{Z}_9$ hotspot coordinates inherited from~\cite{BresslerBGL2026}.
+ 
+ \paragraph{GWOSC O3a strain (H1, 2019-04-01).}
+-A coherent narrowband search for excess power in the predicted Z$_9$ QNM
+-sideband comb across 30--174~Hz was performed over the longest gap-free stretch, 4531~s,
++A narrowband sensitivity estimate for the predicted Z$_9$ QNM sideband comb
++across 30--174~Hz was computed from the longest gap-free stretch, 4531~s,
+ of cleaned H1 strain in the 8192~s span GPS 1238163456--1238171648 (frame
+ \texttt{H1\_HOFT\_CLEAN\_SUB60HZ\_C01}). The script
+ \texttt{TMRB\_GWOSC\_torsion\_search.py} computes the Welch ASD with
+@@ -1117,8 +1122,10 @@
+ across the band), applies a coherent 9-line matched-filter stack against the
+ Gaussian Z$_9$ weights over $n=-4,\dots,4$, the symmetric form adopted in v4 (effective stack gain
+ $\sqrt{N_{\rm eff}} \approx 2.06$), and Bonferroni-corrects across the 45
+-templates. The segment contains no merger, so the search tests stationary lines at
+-the comb frequencies, not a ringdown. The resulting strain UL $h_0^{95\%} \approx 1.95\times10^{-25}$
++templates. The script does not test the strain at specific comb frequencies: it
++converts the measured median noise level into the smallest detectable line
++amplitude, so the result is a sensitivity floor, not a null detection; the segment
++also contains no merger. The resulting strain floor $h_0^{95\%} \approx 1.95\times10^{-25}$
+ converts via $\Delta g = (2\pi f_{\rm eff})^2 \cdot h_0\,L_{\rm arm}/2$ at
+ $f_{\rm eff} \approx 102$~Hz and $L_{\rm arm} = 4$~km to
+ \begin{equation}
+@@ -1163,11 +1170,11 @@
+ \paragraph{Interpretation.}
+ The GRACE-FO null is not in tension with the framework: the predicted
+ $6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ lies $\sim 6\times10^{5}$ times below its UL
+-Eq.~\eqref{eq:grace_ul}. The GWOSC UL Eq.~\eqref{eq:gwosc_ul} lies $\sim 39$ times
++Eq.~\eqref{eq:grace_ul}. The GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} lies $\sim 39$ times
+ \emph{below} the prediction; it is consistent with the framework only because it
+ bounds a $\sim 100$~Hz component that the quasi-static prediction does not have. If
+ a later version of the bulk-leakage model gives $\Delta g$ such a component at
+-that amplitude, this search already excludes it. They establish a quantitative
++that amplitude, data at this sensitivity could test it. They establish a quantitative
+ sensitivity floor for next-generation instruments (Stanford quantum
+ gradiometer at $\leq 10^{-17}~\mathrm{m\,s^{-2}}$, MAGIS-100 commissioning
+ 2027+, GRACE-C 2028+, ESA NGGM 2030s) and define the figure of merit at which
+@@ -1230,7 +1237,7 @@
+ shortening of the ringdown damping time by about 5--10\%, the framework's most
+ direct gravitational-wave test at Einstein Telescope and Cosmic Explorer.  The GRACE-FO null limit Eq.~\eqref{eq:grace_ul} is consistent with the
+ predicted bulk-gravity-leakage amplitude at the 45 hotspot
+-coordinates~\cite{BresslerBGL2026}, the GWOSC limit Eq.~\eqref{eq:gwosc_ul} bounds
++coordinates~\cite{BresslerBGL2026}, the GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} applies to
+ a $\sim 100$~Hz component of it, and together they define the sensitivity floor for
+ next-generation instruments.  The entire TMRB series rests on a single
+ calibration anchor, $\eta_{\mathrm{diff}} = 0.82\pm0.02$ from Gaia

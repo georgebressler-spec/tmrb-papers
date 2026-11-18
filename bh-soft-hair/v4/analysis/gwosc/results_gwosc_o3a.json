@@ -1,0 +1,13 @@
+{
+  "detector": "H1",
+  "gps_start": 1238163456,
+  "T_obs_s": 4531.0,
+  "f_eff_Hz": 102.0,
+  "asd_band_median_invsqrtHz": 6.2498165738023e-24,
+  "h95_strain": 1.9501459161688678e-25,
+  "a_eq_mps2_95CL": 1.6019803466522366e-16,
+  "tmrb_predicted_dg_mps2": 6.3e-15,
+  "headroom_factor": 39.326325152274954,
+  "n_templates": 45,
+  "verdict": "clean_null"
+}

@@ -1,0 +1,158 @@
+--- bh_soft_hair_v4.tex	2026-11-17 20:19:04.735904338 +0000
++++ bh_soft_hair_v4_r2.tex	2026-11-17 20:54:58.278410085 +0000
+@@ -58,7 +58,7 @@
+ \pagestyle{fancy}
+ \fancyhf{}
+ \fancyhead[L]{\small\color{navyblue}\textbf{BRESSLER 2026 · PTRH PAPER 10 · TMRB SOFT-HAIR BH INFORMATION · ZENODO PREPRINT · CC-BY 4.0}}
+-\fancyfoot[C]{\small Page \thepage\ · doi:10.5281/zenodo.20326236 · Open access CC-BY 4.0}
++\fancyfoot[C]{\small Page \thepage\ · doi:10.5281/zenodo.19981840 · Open access CC-BY 4.0}
+ \renewcommand{\headrulewidth}{0.4pt}
+ \renewcommand{\footrulewidth}{0.4pt}
+ 
+@@ -125,8 +125,8 @@
+ This paper proposes an answer to that question. The record is not analog. The grooves do not
+ form a continuous spectrum. The torsion structure of the geometry underlying
+ the compactification of eleven-dimensional spacetime divides the entire
+-recording surface into exactly nine orthogonal channels per Planck-area patch
+-of the horizon. Every possible quantum state that falls into a black hole is
++recording surface into exactly nine orthogonal channels per torsion cell
++(about nine Planck areas) of the horizon. Every possible quantum state that falls into a black hole is
+ encoded as a chord built from those nine fundamental modes. The radiation coming
+ out is not noise --- it is the playback, one quantum at a time, through those
+ same nine channels, in exactly the order the information arrived. The
+@@ -163,7 +163,7 @@
+ the identical construction, and states which of its steps remain open.
+ 
+ The event horizon carries exactly nine quantised soft-hair charge sectors per
+-Planck area from the $\mathbb{Z}_9$ gyroid torsion nodes, yielding a finite
++torsion cell from the $\mathbb{Z}_9$ gyroid torsion nodes, yielding a finite
+ horizon Hilbert space of dimension
+ $\dim\mathcal{H}_{\mathrm{hair}} = 9^{N_{\mathrm{cell}}} = e^{S_{\mathrm{BH}}}$,
+ where $N_{\mathrm{cell}} = A/(4G_4\ln 9)$ torsion cells tile the horizon.
+@@ -239,7 +239,7 @@
+ This paper argues that:
+ \begin{enumerate}[leftmargin=*, label=\arabic*.]
+   \item The horizon carries exactly \emph{nine} quantised soft-hair charge sectors
+-    per Planck area from the $\mathbb{Z}_9$ torsion nodes (Section~\ref{sec:hair}).
++    per torsion cell from the $\mathbb{Z}_9$ torsion nodes (Section~\ref{sec:hair}).
+   \item The Bekenstein--Hawking entropy acquires a universal, size-independent
+     torsion correction $\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 2 \approx 20.468$
+     (Section~\ref{sec:entropy}).
+@@ -283,6 +283,8 @@
+ (Gap~8) is assumed, which is noted explicitly.
+ \textit{(ii)}~Dangling cross-reference \texttt{app:microstate} removed; the
+ relevant argument is now inline at Eq.~\eqref{eq:N_hair}.
++\textit{(iii)}~All cross-citation DOIs updated to concept DOIs (always resolve
++to latest version) throughout.
+ 
+ \smallskip
+ \noindent\textbf{Changes in v4:}
+@@ -301,8 +303,10 @@
+ \textit{(viii)}~A broken section reference in the v3 change list repaired.
+ \textit{(ix)}~Abstract, introduction and conclusion reworded from ``resolves'' to
+ ``proposes a resolution'', matching the open gaps.
+-\textit{(iii)}~All cross-citation DOIs updated to concept DOIs (always resolve
+-to latest version) throughout.
++\textit{(x)}~Consistency pass: nine sectors per torsion cell (not per Planck area)
++throughout; Term~2 of \S\ref{sec:entropy} and Gap~8 use the v3 cell count; Gap~9 no
++longer claims sufficiency; the appendix is labelled as the v1/v2 count; footer DOI set to
++the concept DOI; two arithmetic and citation fixes.
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{6\baselineskip}
+@@ -496,7 +500,7 @@
+ 
+ \subsection{Information Encoding}
+ 
+-Infalling matter permutes the nine torsion states in each Planck cell.  Because
++Infalling matter permutes the nine torsion states in each torsion cell.  Because
+ the $\mathbb{Z}_9$ permutation is unitary and invertible, information is encoded
+ bijectively into the hair configuration.  Hawking radiation is constrained
+ by the $\mathbb{Z}_9$ charge conservation law
+@@ -538,8 +542,8 @@
+ the horizon; it is independent of the area $A$ and additive to $\ln Z_{\rm grav}$.
+ 
+ \textbf{Term 2 — Hair-lattice degeneracy.}
+-Each of the $N_{\rm tiles} = A/(4\ell_{\rm Pl}^2)$ Planck cells on the horizon
+-carries nine independent torsion states.  The $N_{\rm tiles}$ cells are
++Each of the $N_{\rm cell} = A/(4G_4\ln 9)$ torsion cells on the horizon
++carries nine independent torsion states.  The $N_{\rm cell}$ cells are
+ independent because torsion is a local field in the bulk; correlations between
+ cells are suppressed by $e^{-m_{\rm KK} \ell_{\rm Pl}}$ where $m_{\rm KK}$ is
+ the lightest KK mass on the gyroid.  The degeneracy of the \emph{boundary}
+@@ -556,7 +560,7 @@
+ cell: the orbit is the minimal gauge-invariant unit of the soft-hair lattice
+ under the residual $\mathbb{Z}_9$ symmetry of the gyroid compactification, so
+ the per-cell multiplicity already enters through the leading area-law term
+-$(A/4\ell_{\rm Pl}^2)\ln 9$ in Eq.~\eqref{eq:N_hair}, while the orbit
++$N_{\rm cell}\ln 9 = A/(4G_4)$ in Eq.~\eqref{eq:N_hair}, while the orbit
+ itself contributes a single size-independent boundary degeneracy
+ $\ln(9^9)$.  Counting the orbit once is the choice that fixes this term;
+ deriving that count from the path integral is open (Gap~12).
+@@ -871,8 +875,8 @@
+     underlying the soft-hair labelling.
+ 
+   \item \textbf{$G_4 = \ell_{\mathrm{Pl}}^2/\ln 9$ identification (open):}
+-    Appendix~\ref{app:microstate} recovers $S_{\mathrm{micro}} = S_{\mathrm{BH}}$
+-    at the ``natural identification'' $G_4 = \ell_{\mathrm{Pl}}^2/\ln 9$.  In
++    The v1/v2 count (Appendix~\ref{app:microstate}) recovers $S_{\mathrm{micro}} = S_{\mathrm{BH}}$
++    only at the identification $G_4 = \ell_{\mathrm{Pl}}^2/\ln 9$.  In
+     standard natural units $G_4 = \ell_{\mathrm{Pl}}^2$ by definition, so this
+     identification asserts a non-trivial relation between the effective 4D Newton
+     constant and the standard Planck length.  Equivalently, it sets the torsion
+@@ -886,9 +890,9 @@
+ 
+   \item \textbf{Pre-Page-time retrieval (open):} The $\mathbb{Z}_9$
+     charge-conservation law Eq.~\eqref{eq:charge_conservation} and
+-    the modular-invariant partition function Eq.~\eqref{eq:Z_torus} together
+-    guarantee unitarity across the full evaporation, recovering information
+-    from the Hawking spectrum after the Page time.  An explicit protocol
++    the modular-invariant partition function Eq.~\eqref{eq:Z_torus} are
++    necessary conditions for unitarity across the full evaporation; whether
++    they suffice is Gap~11.  An explicit protocol
+     for retrieving information \emph{before} the Page time --- without
+     access to the full radiation ensemble --- is not established here and
+     remains open.
+@@ -1010,7 +1014,7 @@
+ 2026-04-26 returns a clean null at all 45 hotspot coordinates: the sample
+ distribution of $z$-scores is consistent with $\mathcal{N}(0,1)$ ($|\bar z|
+ \approx 0.00$), with per-coordinate residual gravity anomalies in the range
+-$10^{-19}$--$10^{-18}~\mathrm{m\,s^{-2}}$ --- nine orders of magnitude below
++$10^{-19}$--$10^{-18}~\mathrm{m\,s^{-2}}$ --- about four orders of magnitude below
+ the predicted amplitude. The corresponding upper limit set by the
+ $\sim$300~km mascon point-spread function is
+ \begin{equation}
+@@ -1063,8 +1067,8 @@
+ 
+ The TMRB framework proposes a resolution of the black-hole information paradox
+ through three interconnected mechanisms.  First, the $\mathbb{Z}_9$ torsion structure of the
+-Schoen gyroid compactification provides nine soft-hair charge sectors per Planck
+-area on the event horizon — one vacuum ($n=0$) and eight charged ($n=1,\ldots,8$)
++Schoen gyroid compactification provides nine soft-hair charge sectors per torsion
++cell on the event horizon — one vacuum ($n=0$) and eight charged ($n=1,\ldots,8$)
+ — with total Hilbert space dimension $9^{N_{\mathrm{cell}}} = e^{S_{\mathrm{BH}}}$
+ (Eq.~\eqref{eq:N_hair}).  Second,
+ the modular-covariant Gaussian weights $w_n = C\exp(-\pi n^2/9)$ generate a
+@@ -1114,8 +1118,11 @@
+   S_{\mathrm{micro}} &= \ln\!\left(9^{A/(4\ell_{\mathrm{Pl}}^2)}\right)
+     = \frac{A}{4\ell_{\mathrm{Pl}}^2}\ln 9. \label{eq:S_micro}
+ \end{align}
+-This matches $S_{\mathrm{BH}} = A/(4G_4)$ at the identification
+-$G_4 = \ell_{\mathrm{Pl}}^2/\ln 9$, a natural Planck-unit convention.  The
++This matches $S_{\mathrm{BH}} = A/(4G_4)$ only at the identification
++$G_4 = \ell_{\mathrm{Pl}}^2/\ln 9$, which is not a unit convention but Gap~8.
++This is the v1/v2 count; from v3 on the paper tiles the horizon by
++$N_{\mathrm{cell}} = A/(4G_4\ln 9)$ cells, giving $S_{\mathrm{micro}} = A/(4G_4)$
++directly (Eq.~\eqref{eq:N_hair}).  The
+ size-independent torsion correction $\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 2$
+ arises from two distinct contributions: the nine-node hair-lattice log-degeneracy
+ $\mathcal{H}_{\mathrm{hair}} = \ln(9^9) = 9\ln 9$ (a Bekenstein-style counting
+@@ -1303,7 +1310,7 @@
+   R.~Banerjee, S.~K.~Modak,
+   \textit{Quantum tunneling, blackbody spectrum and non-logarithmic entropy
+     correction for Lovelock black holes},
+-  JHEP \textbf{2009}, 063 (2009).
++  JHEP \textbf{2009}, 073 (2009).
+   \href{https://doi.org/10.1088/1126-6708/2009/11/073}{doi:10.1088/1126-6708/2009/11/073}
+   \href{https://arxiv.org/abs/0908.2471}{[arXiv:0908.2471]}
+ 

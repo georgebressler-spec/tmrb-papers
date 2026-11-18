@@ -1,0 +1,8 @@
+sigma^2 = sum n^2 w_n = 1.4314; 2*pi*df*tau = kappa*wR/(9*wI) = 0.1885 (mass independent)
+M=10 f0=1207 tau_ms=0.5537 df=54.18 fwhm=574.9 ratio=0.09424 env_at_tau=0.9749 mismatch=6.043e-05 dtau=-0.046 dfreq=0 rho_needed=90.96
+M=30 f0=402.5 tau_ms=1.661 df=18.06 fwhm=191.6 ratio=0.09424 env_at_tau=0.9749 mismatch=6.043e-05 dtau=-0.046 dfreq=0 rho_needed=90.96
+M=60 f0=201.2 tau_ms=3.322 df=9.03 fwhm=95.82 ratio=0.09424 env_at_tau=0.9749 mismatch=6.043e-05 dtau=-0.046 dfreq=0 rho_needed=90.96
+sigma^2 = sum n^2 w_n = 1.4314; 2*pi*df*tau = kappa*wR/(9*wI) = 0.2949 (mass independent)
+M=10 f0=1729 tau_ms=0.6051 df=77.57 fwhm=526 ratio=0.1475 env_at_tau=0.9396 mismatch=0.0002603 dtau=-0.099 dfreq=0 rho_needed=43.83
+M=30 f0=576.2 tau_ms=1.815 df=25.86 fwhm=175.3 ratio=0.1475 env_at_tau=0.9396 mismatch=0.0002603 dtau=-0.099 dfreq=0 rho_needed=43.83
+M=60 f0=288.1 tau_ms=3.631 df=12.93 fwhm=87.67 ratio=0.1475 env_at_tau=0.9396 mismatch=0.0002603 dtau=-0.099 dfreq=0 rho_needed=43.83

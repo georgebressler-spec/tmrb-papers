@@ -1,0 +1,297 @@
+--- bh_soft_hair_v3.tex	2026-11-17 20:11:15.444885926 +0000
++++ bh_soft_hair_v4.tex	2026-11-17 20:19:04.735904338 +0000
+@@ -82,7 +82,7 @@
+   \href{mailto:george.bressler@proton.me}{\texttt{george.bressler@proton.me}}\\
+   @GeorgeBressler · Sarasota, FL
+ }
+-\date{April 2026 (v2: May 2026; v3: May 2026)}
++\date{April 2026 (v2: May 2026; v3: May 2026; v4: November 2026)}
+ \maketitle
+ \thispagestyle{fancy}
+ 
+@@ -122,7 +122,7 @@
+ Information encoded but permanently inaccessible, which is almost worse than
+ destroyed.
+ 
+-This paper answers that question. The record is not analog. The grooves do not
++This paper proposes an answer to that question. The record is not analog. The grooves do not
+ form a continuous spectrum. The torsion structure of the geometry underlying
+ the compactification of eleven-dimensional spacetime divides the entire
+ recording surface into exactly nine orthogonal channels per Planck-area patch
+@@ -130,7 +130,8 @@
+ encoded as a chord built from those nine fundamental modes. The radiation coming
+ out is not noise --- it is the playback, one quantum at a time, through those
+ same nine channels, in exactly the order the information arrived. The
+-$\mathbb{Z}_9$ conservation law ensures not a single note is lost.
++$\mathbb{Z}_9$ conservation law is the bookkeeping every playback must respect;
++showing that it is enough to lose no note is the open task (Gap~11).
+ 
+ The universe kept the receipt.
+ 
+@@ -158,8 +159,8 @@
+ $w_n = C\exp(-\pi n^2/9)$—has delivered the first discrete holographic dual
+ for flat spacetime and explicitly closed the infrared triangle linking the
+ Weinberg soft theorem, BMS supertranslation symmetry, and gravitational memory.
+-This work completes the UV-to-IR loop by resolving the black-hole information
+-paradox within the identical construction.
++This work proposes a resolution of the black-hole information paradox within
++the identical construction, and states which of its steps remain open.
+ 
+ The event horizon carries exactly nine quantised soft-hair charge sectors per
+ Planck area from the $\mathbb{Z}_9$ gyroid torsion nodes, yielding a finite
+@@ -178,9 +179,11 @@
+ $\ln Z_{\rm tors}$.  The golden-ratio weight
+ $\varphi^{-N_*}$ ($\varphi = (1+\sqrt{5})/2$) exponentially suppresses
+ logarithmic soft-graviton loop corrections (Section~\ref{sec:loop}), while
+-holographic unitarity is established by torus partition function factorisation
+-$Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$ (Section~\ref{sec:unitarity}),
+-together ruling out firewalls and remnants.  All results anchor to the single Gaia DR3
++holographic consistency is argued from torus partition function factorisation
++$Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$ (Section~\ref{sec:unitarity}).
++Remnants are excluded by the vanishing of the area term; whether the construction
++avoids firewalls, and the full unitary map from infalling state to radiation,
++are open (Section~\ref{sec:gaps}, Gaps~10 and~11).  All results anchor to the single Gaia DR3
+ calibration $\eta_{\mathrm{diff}} = 0.82\pm 0.02$.  The 11D CDT extension
+ invoked here is conjectured; the framework is non-supersymmetric.  Four
+ correlated near-term falsifiable predictions are presented, together with
+@@ -233,7 +236,7 @@
+ parafermion spectrum at null infinity~\cite{GepnerQiu1987,ZamoFateev1987} now
+ threads the black-hole event horizon.
+ 
+-This paper demonstrates that:
++This paper argues that:
+ \begin{enumerate}[leftmargin=*, label=\arabic*.]
+   \item The horizon carries exactly \emph{nine} quantised soft-hair charge sectors
+     per Planck area from the $\mathbb{Z}_9$ torsion nodes (Section~\ref{sec:hair}).
+@@ -274,12 +277,30 @@
+ \textit{(i)}~Horizon Hilbert space formula corrected for Bekenstein consistency:
+ $\dim\mathcal{H}_{\mathrm{hair}} = 9^{A/(4\ell_{\mathrm{Pl}}^2)}$ (v1/v2) replaced by
+ $\dim\mathcal{H}_{\mathrm{hair}} = 9^{N_{\mathrm{cell}}} = e^{S_{\mathrm{BH}}}$,
+-$N_{\mathrm{cell}} = A/(4G_4\ln 9)$ throughout (abstract, \S\ref{sec:microstate},
++$N_{\mathrm{cell}} = A/(4G_4\ln 9)$ throughout (abstract, \S\ref{sec:hair},
+ conclusions); the v1/v2 form exceeds the Bekenstein--Hawking bound by a factor
+ of $\ln 9 \approx 2.197$ unless the identification $G_4 = \ell_{\mathrm{Pl}}^2/\ln 9$
+ (Gap~8) is assumed, which is noted explicitly.
+ \textit{(ii)}~Dangling cross-reference \texttt{app:microstate} removed; the
+ relevant argument is now inline at Eq.~\eqref{eq:N_hair}.
++
++\smallskip
++\noindent\textbf{Changes in v4:}
++\textit{(i)}~$Z_{\rm tors}$ equals 2 to about $10^{-12}$ by Poisson summation; the
++earlier ``deviation ${\approx}3\times10^{-4}$'' is withdrawn.
++\textit{(ii)}~Torsion cell area corrected to $4G_4\ln 9 \approx 8.79\,\ell_{\rm Pl}^2$ (was 9.66).
++\textit{(iii)}~Spectral weight of the $n=0,1$ sidebands corrected to ${\approx}85\%$ (was ${>}92\%$).
++\textit{(iv)}~Firewall section rewritten: the state Eq.~\eqref{eq:firewall_state} leaves the
++Hawking pair unentangled, and monogamy constrains multipartite states; firewall avoidance
++is now Gap~10.
++\textit{(v)}~The $\mathbb{Z}_9$ conservation law is stated as a necessary condition
++carrying at most $\ln 9$ nats; the unitary map is now Gap~11.
++\textit{(vi)}~Orbit counting for $9\ln 9$ and the 45-primary parafermion partition
++function added as Gaps~12 and~13.
++\textit{(vii)}~Remnant argument updated to the v3 entropy $S_{\rm micro} = A/(4G_4)$.
++\textit{(viii)}~A broken section reference in the v3 change list repaired.
++\textit{(ix)}~Abstract, introduction and conclusion reworded from ``resolves'' to
++``proposes a resolution'', matching the open gaps.
+ \textit{(iii)}~All cross-citation DOIs updated to concept DOIs (always resolve
+ to latest version) throughout.
+ 
+@@ -348,14 +369,17 @@
+ $\varphi^{-\lambda n}$ form, which lacked modular covariance.
+ The resulting torsion partition function and associated quantities are:
+ \begin{align}
+-  Z_{\mathrm{tors}} &= \sum_{n=0}^{8} \exp\!\left(-\frac{\pi n^2}{9}\right) = \frac{1}{C} \approx 2
+-    \quad \bigl(\text{deviation from 2 is }{\approx}3\times10^{-4}\bigr),
++  Z_{\mathrm{tors}} &= \sum_{n=0}^{8} \exp\!\left(-\frac{\pi n^2}{9}\right) = \frac{1}{C} = 2 + \mathcal{O}\!\left(e^{-9\pi}\right)
++    \quad \bigl(\text{equal to 2 to about }10^{-12}\bigr),
+   \label{eq:Z_tors_val}\\
+   \mathcal{S}_{\mathrm{tors}} &= -\sum_{n=0}^{8} w_n \ln w_n \approx 1.068,
+   \label{eq:torsion_entropy}\\
+   \mathcal{H}_{\mathrm{hair}} &\equiv \ln(9^9) = 9\ln 9 \approx 19.775.
+   \label{eq:H_hair}
+ \end{align}
++By Poisson summation, $\sum_{n\in\mathbb{Z}} e^{-\pi n^2/9} = 3\sum_{k\in\mathbb{Z}} e^{-9\pi k^2}$,
++so the one-sided sum in Eq.~\eqref{eq:Z_tors_val} is $2 + \mathcal{O}(e^{-9\pi})$; the value 2 is
++exact for every practical purpose.
+ Here $\mathcal{S}_{\mathrm{tors}}$ is the Shannon entropy of the Gaussian weight
+ distribution; $\mathcal{H}_{\mathrm{hair}} = 9\ln 9$ is the log-degeneracy of
+ the full nine-node torsion hair lattice (the number of distinct $\mathbb{Z}_9$
+@@ -445,7 +469,7 @@
+ \subsection{Finite Microstate Count}
+ 
+ The horizon is tiled into $N_{\mathrm{cell}} = A/(4G_4\ln 9)$ torsion cells,
+-each of area $A_{\mathrm{cell}} = 4G_4\ln 9 \approx 9.66\,\ell_{\mathrm{Pl}}^2$.
++each of area $A_{\mathrm{cell}} = 4G_4\ln 9 \approx 8.79\,\ell_{\mathrm{Pl}}^2$.
+ Each cell supports any of the nine $\mathbb{Z}_9$ torsion states, so the
+ total Hilbert space dimension is
+ \begin{equation}
+@@ -480,7 +504,11 @@
+   \sum_{n=0}^{8} n \cdot N_n^{\mathrm{in}} \equiv \sum_{n=0}^{8} n \cdot N_n^{\mathrm{out}} \pmod{9},
+   \label{eq:charge_conservation}
+ \end{equation}
+-which carries the imprint of the infalling state, restoring unitarity.
++which every evaporation history must respect.  A single mod-9 conservation law
++fixes one number, so it carries at most $\ln 9 \approx 2.2$ nats about the
++infalling state; it is a necessary condition for the proposed encoding, not by
++itself a demonstration of unitarity.  The full map from infalling state to
++radiation is open (Gap~11 in Section~\ref{sec:gaps}).
+ Note that the $n=0$ (vacuum) sector contributes zero to both sides of
+ Eq.~\eqref{eq:charge_conservation} regardless of $N_0$; the vacuum sector
+ occupation is separately constrained by total particle-number conservation.
+@@ -504,8 +532,8 @@
+   \delta(\ln Z)_{\mathrm{tors}} = \ln Z_{\mathrm{tors}} = \ln 2 \approx 0.693,
+   \label{eq:lnZ_tors}
+ \end{equation}
+-where $Z_{\mathrm{tors}} = \sum_{n=0}^8 \exp(-\pi n^2/9) \approx 2$ (deviation ${\approx}3\times10^{-4}$;
+-see Eq.~\eqref{eq:Z_tors_val}).  This term arises from integrating the torsion
++where $Z_{\mathrm{tors}} = \sum_{n=0}^8 \exp(-\pi n^2/9) = 2$ to about $10^{-12}$
++(see Eq.~\eqref{eq:Z_tors_val}).  This term arises from integrating the torsion
+ $\mathbb{Z}_9$ modes over the Euclidean boundary $S^1_\beta \times S^2$ at
+ the horizon; it is independent of the area $A$ and additive to $\ln Z_{\rm grav}$.
+ 
+@@ -530,7 +558,8 @@
+ the per-cell multiplicity already enters through the leading area-law term
+ $(A/4\ell_{\rm Pl}^2)\ln 9$ in Eq.~\eqref{eq:N_hair}, while the orbit
+ itself contributes a single size-independent boundary degeneracy
+-$\ln(9^9)$.
++$\ln(9^9)$.  Counting the orbit once is the choice that fixes this term;
++deriving that count from the path integral is open (Gap~12).
+ 
+ The two terms are orthogonal — Term~1 comes from the path integral measure over
+ torsion fluctuations, Term~2 from the boundary state degeneracy — and add to
+@@ -678,10 +707,14 @@
+     \equiv |\chi_{\mathbb{Z}_9}(\tau)|^2,
+   \label{eq:Z_torus}
+ \end{equation}
+-where $\chi_a(\tau)$ are the nine $\mathbb{Z}_9$ parafermion characters and
++where $\chi_a(\tau)$ are the characters of the nine $\mathbb{Z}_9$ charge sectors and
+ $\tau = \beta/(2\pi)$ with $\beta = 8\pi G_4 M$ the inverse Hawking temperature.
+ The diagonal invariant is the unique choice consistent with the $\mathbb{Z}_9$
+ charge conservation law Eq.~\eqref{eq:charge_conservation}.
++The $\mathbb{Z}_9$ parafermion theory ($SU(2)_9/U(1)$) has $k(k+1)/2 = 45$
++primary fields, so each charge sector collects several primaries; writing
++Eq.~\eqref{eq:Z_torus} over all 45 characters and checking its modular
++invariance is open (Gap~13).
+ 
+ Eq.~\eqref{eq:Z_torus} is the standard holomorphic criterion for
+ unitarity in 2D CFT~\cite{DiFrancesco1997}.  It holds here because:
+@@ -698,7 +731,7 @@
+ \emph{matching} phases, ensuring $Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$ is
+ well-defined under all modular transformations.
+ 
+-\subsection{No Firewall, No Remnant}
++\subsection{Firewalls and Remnants}
+ 
+ The firewall conjecture~\cite{AMPS2013} arises from an assumed monogamy-of-entanglement
+ conflict: mode $b$ (late Hawking radiation) cannot be simultaneously entangled
+@@ -710,16 +743,20 @@
+   |\Psi\rangle = \sum_{n=0}^{8} \alpha_n\,|b_n\rangle \otimes |\tilde{b}_n\rangle \otimes |q_n\rangle_{\rm hair},
+   \label{eq:firewall_state}
+ \end{equation}
+-where $|q_n\rangle_{\rm hair}$ is the torsion-hair sector.  The monogamy constraint
+-applies to \emph{bipartite} entanglement; the three-way entanglement Eq.~\eqref{eq:firewall_state}
+-is not monogamy-constrained.  Early radiation $R$ is entangled with the hair sector
+-$|q_n\rangle$, not directly with $b$ or $\tilde{b}$, so the AMPS argument does not apply.
+-The three-way entanglement structure Eq.~\eqref{eq:firewall_state} recovers the
+-Page curve~\cite{Page1993} when the gravitational entropy is replaced by
+-$S_{\mathrm{TMRB}}$ in the island formula~\cite{Penington2020}.
++where $|q_n\rangle_{\rm hair}$ is the torsion-hair sector.  Tracing out the hair sector in Eq.~\eqref{eq:firewall_state} leaves
++$\rho_{b\tilde b} = \sum_n |\alpha_n|^2\, |b_n\tilde b_n\rangle\langle b_n\tilde b_n|$,
++which is separable: as written, the state does not keep $b$ entangled with
++$\tilde b$, and smoothness of the horizon in the AMPS sense requires exactly that
++entanglement.  Monogamy of entanglement also constrains multipartite
++states~\cite{CKW2000}.  Avoiding the firewall therefore needs a different
++hair-sector structure, in which $b$ stays entangled with $\tilde b$ while the
++early radiation $R$ purifies the hair; constructing it is open (Gap~10).
++Whether replacing the gravitational entropy by $S_{\mathrm{TMRB}}$ in the island
++formula~\cite{Penington2020} reproduces the Page curve~\cite{Page1993} is
++likewise still to be shown.
+ 
+ Remnants are excluded because the microstate \emph{entropy}
+-$S_{\mathrm{micro}} = (A/4\ell_{\mathrm{Pl}}^2)\ln 9 \to 0$ as $A\to 0$,
++$S_{\mathrm{micro}} = A/(4G_4) \to 0$ as $A\to 0$,
+ leaving no finite-entropy state to store information at sub-Planckian areas.
+ The torsion correction $\Delta S_{\mathrm{tors}}$ is size-independent and
+ does not prevent this vanishing — it is dominated by the area term for any
+@@ -755,8 +792,8 @@
+ 402$~Hz gives $\Delta\omega/(2\pi) \approx 18$~Hz with the dominant sidebands
+ ($n=0$, $\pm 1$, $\pm 3$, $\pm 6$) carrying weights $w_n \in \{0.500,\,0.353,\,
+ 0.022,\,\sim 0\}$ — the 3-6-9 subgroup channels that close among themselves
+-under the $\mathbb{Z}_9$ fusion algebra. The dominant $|n|\leq 1$ sidebands
+-carry $> 92\%$ of the total spectral weight.
++under the $\mathbb{Z}_9$ fusion algebra. The $n=0$ and $n=1$ sidebands
++carry about $85\%$ of the total spectral weight ($w_0 + w_1 \approx 0.853$).
+ 
+ \begin{figure}[ht!]
+ \centering
+@@ -839,7 +876,7 @@
+     standard natural units $G_4 = \ell_{\mathrm{Pl}}^2$ by definition, so this
+     identification asserts a non-trivial relation between the effective 4D Newton
+     constant and the standard Planck length.  Equivalently, it sets the torsion
+-    cell area to $A_{\rm cell} = 4G_4\ln 9 \approx 9.66\,\ell_{\mathrm{Pl}}^2$
++    cell area to $A_{\rm cell} = 4G_4\ln 9 \approx 8.79\,\ell_{\mathrm{Pl}}^2$
+     rather than $4\ell_{\mathrm{Pl}}^2$. Deriving this cell area from the
+     prismatic Hilbert action of Paper~1~\cite{BresslerPrismatic2026} --- rather
+     than imposing it as a self-consistency condition --- is the highest-priority
+@@ -855,6 +892,26 @@
+     for retrieving information \emph{before} the Page time --- without
+     access to the full radiation ensemble --- is not established here and
+     remains open.
++
++  \item \textbf{Firewall avoidance (open, added in v4):} The state
++    Eq.~\eqref{eq:firewall_state} is of GHZ type; tracing out the hair leaves the
++    Hawking pair $b,\tilde b$ unentangled.  A hair-sector state that keeps $b$
++    entangled with $\tilde b$ while the early radiation purifies the hair is
++    required and not yet constructed.
++
++  \item \textbf{Unitary map (open, added in v4):} The $\mathbb{Z}_9$ conservation
++    law Eq.~\eqref{eq:charge_conservation} is necessary but carries at most
++    $\ln 9$ nats; an explicit unitary map from infalling state to Hawking radiation
++    through the hair sector is required.
++
++  \item \textbf{Orbit counting (open, added in v4):} The size-independent term
++    $9\ln 9$ follows from counting the nine-node orbit once; that count is a
++    choice to be derived from the boundary path integral.
++
++  \item \textbf{Full parafermion partition function (open, added in v4):} The
++    $\mathbb{Z}_9$ parafermion theory has 45 primary fields; Eq.~\eqref{eq:Z_torus}
++    is written over the nine charge sectors, and its form over all 45 characters,
++    with modular invariance, remains to be checked.
+ \end{enumerate}
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+@@ -1004,8 +1061,8 @@
+ \section{Conclusion}
+ \label{sec:conclusion}
+ 
+-The TMRB framework resolves the black-hole information paradox through three
+-interconnected mechanisms.  First, the $\mathbb{Z}_9$ torsion structure of the
++The TMRB framework proposes a resolution of the black-hole information paradox
++through three interconnected mechanisms.  First, the $\mathbb{Z}_9$ torsion structure of the
+ Schoen gyroid compactification provides nine soft-hair charge sectors per Planck
+ area on the event horizon — one vacuum ($n=0$) and eight charged ($n=1,\ldots,8$)
+ — with total Hilbert space dimension $9^{N_{\mathrm{cell}}} = e^{S_{\mathrm{BH}}}$
+@@ -1017,9 +1074,9 @@
+ hair-lattice log-degeneracy and $\ln 2 = \ln Z_{\mathrm{tors}}$ is the Euclidean
+ boundary contribution.  Third, the golden-ratio factor $\varphi^{-N_*}$
+ exponentially suppresses logarithmic soft-graviton loop corrections, while
+-holographic unitarity follows from torus partition function factorisation
+-$Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$, together ruling out firewalls and
+-remnants.
++holographic consistency is argued from torus partition function factorisation
++$Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$.  Remnants are excluded; firewall
++avoidance and the full unitary map remain open (Gaps~10 and~11).
+ 
+ These results are not isolated: they are the direct UV extension of the same
+ $\mathbb{Z}_9$ mathematics that closes the infrared triangle at $\mathscr{I}^+$
+@@ -1103,6 +1160,11 @@
+   Phys.\ Rev.\ D \textbf{48}, 3743 (1993).
+   \href{https://doi.org/10.1103/PhysRevD.48.3743}{doi:10.1103/PhysRevD.48.3743}
+ 
++\bibitem{CKW2000}
++  V.~Coffman, J.~Kundu, W.~K.~Wootters,
++  \textit{Distributed entanglement},
++  Phys.\ Rev.\ A \textbf{61}, 052306 (2000).
++
+ \bibitem{AMPS2013}
+   A.~Almheiri, D.~Marolf, J.~Polchinski, J.~Sully,
+   \textit{Black holes: complementarity or firewalls?},
