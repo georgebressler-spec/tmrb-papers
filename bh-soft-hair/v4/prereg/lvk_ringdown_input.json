@@ -1,0 +1,23 @@
+{
+  "source": "GWTC-5.0: Tests of General Relativity, arXiv:2607.19293v1 (PDF sha256 4ab5df879daa2f4acd2d9fac32e64f5daf78d8fddd73ba5d76ecc5a2047ab101). Definition, eq. (18): tau_lm0 = tau_lm0^GR (1 + dtau_lm0). pSEOBNRv5PHM (IMR-based), so t0 = 0 by the registered rule. Ringdown-only analyses (Sec. 7.1) report no combined dtau_220.",
+  "analyses": [
+    {"name": "pSEOBNR, all events, multiplied posteriors (eq. 21, p. 23)", "quantity": "dtau_220",
+     "median": 0.07, "lo90": 0.02, "hi90": 0.13, "t0_over_tau": null, "common_deviation": true, "primary": true,
+     "notes": "0.07 +0.06 -0.05"},
+    {"name": "pSEOBNR, all events, hierarchical mean mu_dtau (eq. 22, p. 23)", "quantity": "dtau_220",
+     "median": 0.09, "lo90": 0.03, "hi90": 0.16, "t0_over_tau": null, "common_deviation": false,
+     "notes": "0.09 +0.07 -0.06; sigma < 0.10"},
+    {"name": "pSEOBNR, all events, hierarchical population marginal (eq. 22, p. 23)", "quantity": "dtau_220",
+     "median": 0.09, "lo90": -0.01, "hi90": 0.22, "t0_over_tau": null, "common_deviation": false,
+     "notes": "0.09 +0.13 -0.10"},
+    {"name": "pSEOBNR, five highest-SNR events, multiplied (p. 24)", "quantity": "dtau_220",
+     "median": 0.02, "lo90": -0.06, "hi90": 0.10, "t0_over_tau": null, "common_deviation": true,
+     "notes": "0.02 +0.08 -0.08"},
+    {"name": "pSEOBNR, five highest-SNR events without GW250114, multiplied (p. 24)", "quantity": "dtau_220",
+     "median": 0.08, "lo90": -0.04, "hi90": 0.22, "t0_over_tau": null, "common_deviation": true,
+     "notes": "0.08 +0.14 -0.12"},
+    {"name": "pSEOBNR, all events without GW250114, multiplied (p. 24)", "quantity": "dtau_220",
+     "median": 0.11, "lo90": 0.04, "hi90": 0.20, "t0_over_tau": null, "common_deviation": true,
+     "notes": "0.11 +0.09 -0.07"}
+  ]
+}
