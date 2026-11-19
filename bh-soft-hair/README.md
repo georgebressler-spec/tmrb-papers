@@ -12,6 +12,7 @@ Paper 10 of the PTRH series. Concept DOI: [10.5281/zenodo.19981840](https://doi.
 | `v4/analysis/grace/` | GRACE material. See the note below. |
 | `v4/audits/` | Audits 2–4 of v4 and the Nov 18 GRACE/LIGO/Sen check. |
 | `v4/prereg/` | The X24si registration, transcribed input, frozen script, output and result of the LVK ringdown test (§7.1). |
+| `v4/review/` | The X24si review packet for the Grok team (pinned hashes, criteria written first) and the review log. |
 | `v4/revisions/` | The diffs v3 → r1 → … → r11, and the edit scripts that made each revision. |
 
 ## GRACE material (read before reusing)
