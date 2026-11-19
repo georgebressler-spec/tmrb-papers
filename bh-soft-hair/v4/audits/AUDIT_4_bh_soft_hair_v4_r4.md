@@ -1,6 +1,6 @@
 # Audit 4 of the soft-hair paper, v4 r4 → r5 (Nov 18 2026)
 
-Audited: `bh_soft_hair_v4_r4.tex`, plus, for the first time, the two analysis scripts the paper cites. They are on Drive in folder `166Tkp5r0Ghjxujh6XZsaWBZDfyhB_5uM`: `TMRB_GWOSC_torsion_search.py` (modified May 2), `results_gwosc_o3a.json` and `TMRB_GRACE_torsion_search.py`.
+Audited: `bh_soft_hair_v4_r4.tex`, plus, for the first time, the two analysis scripts the paper cites. They are on Drive in the project Drive: `TMRB_GWOSC_torsion_search.py` (modified May 2), `results_gwosc_o3a.json` and `TMRB_GRACE_torsion_search.py`.
 
 ## 1. Confirmations George asked for
 

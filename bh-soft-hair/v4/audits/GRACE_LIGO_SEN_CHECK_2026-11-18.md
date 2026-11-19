@@ -1,6 +1,6 @@
 # GRACE, LIGO and Sen checks (Nov 18 2026)
 
-Sources: the Drive folder of the Apr 26 run (`1V59rCTdc90Vnr_ya3Kws19RtbH7HGn52`), containing the real NetCDF (45 MB), `TMRB_GRACE_search_results.png/.pdf` (Apr 26 13:51) and the Apr 27 script. The May 2 script, `results_grace_45coords.csv`, `TMRB_GWOSC_torsion_search.py` and `results_gwosc_o3a.json` are in folder `166Tkp5r0Ghjxujh6XZsaWBZDfyhB_5uM`. Sen, arXiv:1205.0971v2, was read in full now that arxiv.org is allowed.
+Sources: the Drive folder of the Apr 26 run , containing the real NetCDF (45 MB), `TMRB_GRACE_search_results.png/.pdf` (Apr 26 13:51) and the Apr 27 script. The May 2 script, `results_grace_45coords.csv`, `TMRB_GWOSC_torsion_search.py` and `results_gwosc_o3a.json` are in the project Drive. Sen, arXiv:1205.0971v2, was read in full now that arxiv.org is allowed.
 
 ## GRACE
 1. **A real run on GRACE data happened (Apr 26).** The PNG shows 2002–2026 water-height residuals of about ±1.5 cm at the best coordinate, a bimodal slope histogram, and a z histogram.

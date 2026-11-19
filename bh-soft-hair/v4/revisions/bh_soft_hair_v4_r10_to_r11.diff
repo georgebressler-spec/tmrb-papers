@@ -1,0 +1,29 @@
+--- /tmp/claude-0/-home-user/89a853b9-534a-596e-a20b-c031d7c9175a/scratchpad/paper/bh_soft_hair_v4_r10.tex	2026-11-18 16:37:53.481128906 +0000
++++ /tmp/claude-0/-home-user/89a853b9-534a-596e-a20b-c031d7c9175a/scratchpad/paper/bh_soft_hair_v4_r11.tex	2026-11-19 14:48:55.208729403 +0000
+@@ -207,9 +207,11 @@
+ \end{abstract}
+ 
+ % ── AI Disclosure ─────────────────────────────────────────────────────────────
+-{\small\textit{AI disclosure: Mathematical iteration via Grok (xAI);
+-document formatting and refinement via Claude (Anthropic).
+-All theoretical content, interpretations, and responsibility remain with the author.}}
++{\small\textit{AI disclosure: Mathematical iteration in v1--v3 via Grok (xAI). For v4,
++Claude (Anthropic) audited the paper, ran the numerical checks, designed, registered and
++ran the X24si test of Section~\ref{sec:x24si_test}, and drafted the revisions. The
++theoretical framework is the author's, and every decision on what this paper claims, and
++responsibility for it, remain with the author.}}
+ 
+ \vspace{8pt}
+ 
+@@ -329,8 +331,9 @@
+   \item \textbf{Corrections.} Torsion cell area $8.79\,\ell_{\rm Pl}^2$; sideband weights;
+     loop bound; torsion classes in $H^3$ (Dijkgraaf--Witten); modular invariance as a
+     consistency condition; imaginary $\tau$; quantum dimension 3; charges modulo $2\pi$;
+-    footer DOI set to the concept DOI; references corrected and added.
+-  \item The full revision trail (r1--r10), audits, registration files and analysis scripts
++    footer DOI set to the concept DOI; references corrected and added; AI disclosure
++    updated to state Claude's role in v4.
++  \item The full revision trail (r1--r11), audits, registration files and analysis scripts
+     are included in the Zenodo record.
+ \end{enumerate}
+ 

@@ -5,14 +5,14 @@ Paper 10 of the PTRH series. Concept DOI: [10.5281/zenodo.19981840](https://doi.
 | Folder | What it is |
 |---|---|
 | `v3/` | The published v3, as downloaded from Zenodo record 20331456 (May 21 2026): LaTeX source, PDF, and figure scripts with their outputs. |
-| `v4/` | v4 (revision r10, Nov 18 2026), not yet on Zenodo: `bh_soft_hair_v4.tex` and `.pdf`. |
+| `v4/` | v4 (revision r11, Nov 19 2026), not yet on Zenodo: `bh_soft_hair_v4.tex` and `.pdf`. |
 | `v4/figures/` | Figures 1–6. Figures 1, 2, 4 and 5 were regenerated from the v3 scripts, as patched in v4. Fig. 6 is the unchanged output image of the 2026-04-26 GRACE run. |
 | `v4/analysis/ringdown/` | `ringdown_signature.py` and `kerr_spin_table.py` (both cited in the paper, §7), and an independent cross-check, `verify_ringdown_independent.py`, each with its output. |
 | `v4/analysis/gwosc/` | The LIGO/GWOSC sensitivity-floor script and its saved result (`results_gwosc_o3a.json`). |
 | `v4/analysis/grace/` | GRACE material. See the note below. |
 | `v4/audits/` | Audits 2–4 of v4 and the Nov 18 GRACE/LIGO/Sen check. |
 | `v4/prereg/` | The X24si registration, transcribed input, frozen script, output and result of the LVK ringdown test (§7.1). |
-| `v4/revisions/` | The diffs v3 → r1 → … → r10, and the edit scripts that made each revision. |
+| `v4/revisions/` | The diffs v3 → r1 → … → r11, and the edit scripts that made each revision. |
 
 ## GRACE material (read before reusing)
 - `TMRB_GRACE_search_results_2026-04-26.{png,pdf}` is the output of the real run on `GRCTellus.JPL.200204_202602.GLO.RL06.3M.MSCNv04CRI.nc`. The NetCDF is 45 MB and is kept on Drive, not here.
