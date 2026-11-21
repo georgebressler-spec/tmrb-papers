@@ -1,0 +1,458 @@
+--- revisions/bh_soft_hair_v4_r11_backup_2026-11-20.tex	2026-11-19 18:29:26.135223822 -0500
++++ bh_soft_hair_v4.tex	2026-11-21 10:33:39.342355201 -0500
+@@ -136,12 +136,10 @@
+ 
+ If that task is done, the universe kept the receipt.
+ 
+-All of this follows from a single observational anchor: one measurement of the
+-Milky Way's phase spiral by the Gaia satellite, one number,
++Amplitude predictions in this series use an assumed TMRB parameter,
+ $\eta_{\mathrm{diff}} = 0.82 \pm 0.02$, which fixes the framework's
+-normalisation and connects the largest observable structure in our galaxy to the
+-smallest meaningful scale in physics. Whether that link is more than a
+-coincidence is what the predictions below are built to test.
++normalisation. The ringdown and entropy results do not depend on this
++number.
+ 
+ What follows is the derivation.
+ \end{quote}
+@@ -163,13 +161,15 @@
+ This work proposes a resolution of the black-hole information paradox within
+ the identical construction, and states which of its steps remain open.
+ 
+-The event horizon carries exactly nine quantised soft-hair charge sectors per
++The event horizon is proposed to carry nine quantised soft-hair charge sectors per
+ torsion cell from the $\mathbb{Z}_9$ gyroid torsion nodes, yielding a finite
+ horizon Hilbert space of dimension
+ $\dim\mathcal{H}_{\mathrm{hair}} = 9^{N_{\mathrm{cell}}} = e^{S_{\mathrm{BH}}}$,
+-where $N_{\mathrm{cell}} = A/(4G_4\ln 9)$ torsion cells tile the horizon.
++which matches the area law by construction, given the cell area
++$A_{\mathrm{cell}} = 4G_4\ln 9$, which is not yet derived (Gap~8). Here
++$N_{\mathrm{cell}} = A/(4G_4\ln 9)$ torsion cells tile the horizon.
+ Beyond the one-loop logarithm $c_{\log}\ln(A/G_4)$, the Bekenstein--Hawking
+-entropy receives a size-independent topological correction
++entropy is proposed to receive a size-independent topological correction
+ \[
+   S_{\mathrm{TMRB}} = \frac{A}{4G_4} + c_{\log}\ln\frac{A}{G_4} + 9\ln 9 + \ln 3
+     + \mathcal{O}\!\left(\frac{G_4}{A}\right),
+@@ -181,25 +181,21 @@
+ $\varphi^{-N_*}$ ($\varphi = (1+\sqrt{5})/2$) is proposed to suppress
+ logarithmic soft-graviton loop corrections; it is not yet derived from the
+ weights (Section~\ref{sec:loop}, Gap~15), while
+-holographic consistency is argued from torus partition function factorisation
+-$Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$ (Section~\ref{sec:unitarity}).
+-Information-carrying remnants are excluded by a capacity bound of
+-$\Delta S_{\rm tors} \approx 20.9$ nats; whether the construction
++holographic consistency is argued from the diagonal modular invariant
++$Z(\tau)=\sum_a|\chi_a(\tau)|^2$ (Section~\ref{sec:unitarity}).
++Information-carrying remnants would be excluded if the size-independent term bounds the endpoint capacity (the expansion is not valid as $A\to 0$; Gaps~14 and~15); whether the construction
+ avoids firewalls, and the full unitary map from infalling state to radiation,
+-are open (Section~\ref{sec:gaps}, Gaps~10 and~11).  All results anchor to the single Gaia DR3
+-calibration $\eta_{\mathrm{diff}} = 0.82\pm 0.02$.  The 11D CDT extension
+-invoked here is conjectured; the framework is non-supersymmetric.  Four
+-correlated predictions are presented (three near-term falsifiable; the entropy gap
+-has no observable yet), together with
++are open (Section~\ref{sec:gaps}, Gaps~10 and~11).  Amplitude predictions use the assumed TMRB parameter $\eta_{\mathrm{diff}} = 0.82\pm 0.02$; the ringdown and entropy results do not depend on this number.  The 11D CDT extension
++invoked here is conjectured; the framework is non-supersymmetric.  Four predictions are presented: one already tested and excluded (ringdown damping time), two testable by $\sim$2030--2035, and the entropy gap with no observable yet, together with
+ two sensitivity scales: GRACE/GRACE-FO mascon gravity (about
+ $4\times10^{-9}~\mathrm{m\,s^{-2}}$, roughly $10^{6}$ times above the framework's predicted
+ quasi-static bulk-gravity-leakage amplitude), and a GWOSC O3a
+ narrowband sensitivity floor that lies below that amplitude but applies only to a
+ component near 100~Hz, which the prediction does not contain. The ringdown
+ prediction was tested against published LIGO--Virgo--KAGRA data by the X24si method
+-(registered with an outside clock before any result was read, and run once): GWTC-5.0
++and run once. The registration was pushed (16:05:56~UTC) before the transcribed input (16:06:45~UTC) and the run (16:07:20~UTC). The push times establish order. That no result had been read at registration is the registrant's statement. GWTC-5.0
+ gives $\delta\hat\tau_{220} = 0.07^{+0.06}_{-0.05}$, which excludes the predicted
+-shortening, so under its stated assumptions that prediction is disfavoured.
++shortening, so under its stated assumptions that prediction is disfavoured. The primary verdict holds for every spin and start time in Table~\ref{tab:ringdown_spin}.
+ 
+ \smallskip
+ \noindent\textbf{Keywords:} black-hole information paradox, soft hair, BMS symmetry,
+@@ -257,12 +253,12 @@
+   \item A golden-ratio factor $\varphi^{-N_*}$ is proposed to suppress logarithmic
+     soft-graviton loop corrections (Section~\ref{sec:loop}); it is not yet derived
+     from the weights $w_n = C\exp(-\pi d(n)^2/9)$ (Gap~15).
+-  \item The torus partition function factorises in the discrete holomorphic sector,
+-    supporting holographic consistency (Section~\ref{sec:unitarity}; Gap~13).
++  \item The torus partition function is written as the diagonal modular invariant
++    $\sum_a|\chi_a(\tau)|^2$, supporting holographic consistency (Section~\ref{sec:unitarity}; Gap~13).
+ \end{enumerate}
+ 
+ Open theoretical gaps are documented in Section~\ref{sec:gaps}.
+-Four predictions (three falsifiable near-term) and current observational constraints are
++Four predictions --- one already tested and excluded (ringdown damping time), two testable by $\sim$2030--2035, and the entropy gap with no observable yet --- and current observational constraints are
+ presented in Section~\ref{sec:predictions}.
+ For the complete series cross-citation map, master parameter table, and
+ TRL-3/4 test protocol spanning all eight active papers, see~\cite{BresslerSurvey2026}.
+@@ -302,12 +298,12 @@
+ \begin{enumerate}[leftmargin=*, label=\textit{(\roman*)}, itemsep=1pt, topsep=2pt]
+   \item \textbf{Ringdown prediction tested against published data and disfavoured, by
+     the X24si method} (human-in-the-loop self-recursive reasoning, anchored by an outside
+-    clock and outside data). Before any result was read, a test of this paper's ringdown
++    clock and outside data). A test of this paper's ringdown
+     prediction against LIGO--Virgo--KAGRA data was registered with an outside clock (a
+     timestamped GitHub commit): the claim, the data source, the decision rule and a frozen
+-    decision script. Run once on GWTC-5.0, the combined result
++    decision script. The registration was pushed (16:05:56~UTC) before the transcribed input (16:06:45~UTC) and the run (16:07:20~UTC). The push times establish order. That no result had been read at registration is the registrant's statement. Run once on GWTC-5.0, the combined result
+     $\delta\hat\tau_{220} = 0.07^{+0.06}_{-0.05}$ excludes the predicted shortening
+-    ($-0.095$; band $-0.126$ to $-0.070$), and all five secondary combinations agree. The
++    ($-0.095$; band $-0.126$ to $-0.070$), and all five secondary combinations agree under the registered mapping. The primary verdict holds for every spin and start time in Table~\ref{tab:ringdown_spin}. The
+     result stands as run (Section~\ref{sec:x24si_test}).
+   \item \textbf{Entropy correction revised.} The weights are made $\mathbb{Z}_9$-symmetric,
+     so $\ln Z_{\rm tors} = \ln 3$ and $\Delta S_{\rm tors} = 9\ln 9 + \ln 3 \approx 20.874$
+@@ -344,11 +340,12 @@
+ 
+ \subsection{Canonical Parameters}
+ 
+-All TMRB results are anchored to a single calibration from Gaia DR3~\cite{GaiaDR3}:
++The TMRB amplitude predictions use an assumed parameter
+ \begin{equation}
+   \eta_{\mathrm{diff}} = 0.82 \pm 0.02.
+   \label{eq:etadiff}
+ \end{equation}
++This value is not a Gaia DR3 measurement.\footnote{It first appears in Unified Framework v1.0 (DOI 10.5281/zenodo.19192990) as a plasma diffraction efficiency whose printed formula omits $dx$ and does not reproduce $0.82$. The uncertainty $\pm 0.02$ is not given there.}
+ The remaining parameters are derived or independently motivated (Table~\ref{tab:params}).
+ 
+ \begin{table}[ht]
+@@ -361,7 +358,7 @@
+ \toprule
+ Symbol & Value & Role & Domain \\
+ \midrule
+-$\eta_{\mathrm{diff}}$ & $0.82\pm0.02$ & Phase-space diffusion ratio & All papers \\
++$\eta_{\mathrm{diff}}$ & $0.82\pm0.02$ & Assumed TMRB parameter & All papers \\
+ $\lambda_{\mathrm{rec}}$ & 5.2 & Recursive branching depth & All papers \\
+ $\mu$ & 2.1 & Branching modulation & All papers \\
+ $\kappa_{\mathrm{CE}}$ & $\mu/\lambda_{\mathrm{rec}} = 0.4038$ & Conformal-weight comb & Holography, galactoseismology \\
+@@ -380,8 +377,9 @@
+ M-theory is compactified on the Schoen gyroid, a triply-periodic minimal surface
+ with crystallographic space group $\Gamma = Ia\bar{3}d$ (No.~230)~\cite{Schoen1970}.
+ The gyroid has no G$_2$ holonomy; the construction is explicitly
+-non-supersymmetric, with UV finiteness arising from the causal structure of the
+-conjectured 11D Causal Dynamical Triangulations (CDT) extension~\cite{AJL2004,AJL2005}.
++non-supersymmetric, with UV behaviour conjectured to follow from the causal structure of the
++conjectured 11D Causal Dynamical Triangulations (CDT) extension.
++Ambj{\o}rn, Jurkiewicz and Loll (2005) are cited for the dimensional-reduction evidence in 4D CDT only~\cite{AJL2005}.
+ 
+ The discrete torsion phases are
+ \begin{equation}
+@@ -462,8 +460,8 @@
+ by the following argument: the 11D C-field flux restricted to any 3-cycle
+ $\Sigma_3$ threading the horizon carries the phase $e^{i\theta_n}$; upon
+ dimensional reduction, this phase labels distinct boundary states on the
+-bifurcation $S^2$ exactly as at $\mathscr{I}^+$.  This identification follows
+-directly from the Kaluza--Klein reduction of the 11D C-field on the gyroid:
++bifurcation $S^2$ exactly as at $\mathscr{I}^+$.  This identification is expected to follow
++from the Kaluza--Klein reduction of the 11D C-field on the gyroid (Gap~7):
+ the discrete torsion classes in $H^3(\mathbb{Z}_9, U(1)) \cong \mathbb{Z}_9$
+ ~\cite{DijkgraafWitten1990} are preserved by the reduction and project
+ onto the bifurcation $S^2$ as $\mathbb{Z}_9$-valued boundary phases, mirroring
+@@ -480,8 +478,8 @@
+   \label{eq:Q_super}
+ \end{equation}
+ where $M_{\mathrm{Pl,11}}$ is the 11D Planck mass, $\theta_n = 2\pi n/9$ is
+-dimensionless, and $\eta_{\mathrm{diff}}$ anchors the charge normalisation to
+-the Gaia DR3 calibration.  The charges $Q^{(n)}$ carry dimensions of
++dimensionless, and $\eta_{\mathrm{diff}}$ is the assumed TMRB parameter that sets the charge normalisation.
++The charges $Q^{(n)}$ carry dimensions of
+ $[\text{mass}]^3$ in natural units (equivalently, $[\text{length}]^{-3}$ with
+ $\hbar = c = 1$); this is the natural dimension of BMS supertranslation charges
+ in 11D — specifically the stress-energy flux integrated over the bifurcation
+@@ -529,8 +527,8 @@
+ \end{equation}
+ and the corresponding microstate entropy
+ $S_{\mathrm{micro}} = N_{\mathrm{cell}}\ln 9 = A/(4G_4) = S_{\mathrm{BH}}$
+-reproduces the Bekenstein--Hawking area law exactly without additional
+-assumptions.  The v1/v2 form $9^{A/(4\ell_{\mathrm{Pl}}^2)}$ is numerically
++matches the area law by construction, given the cell area
++$A_{\mathrm{cell}} = 4G_4\ln 9$, which is not yet derived (Gap~8).  The v1/v2 form $9^{A/(4\ell_{\mathrm{Pl}}^2)}$ is numerically
+ equivalent under the emergent identification $G_4 = \ell_{\mathrm{Pl}}^2/\ln 9$
+ (Gap~8); the present form is manifestly Bekenstein-consistent and adopted here
+ to avoid apparent overcounting of the bound.
+@@ -635,11 +633,15 @@
+ If the proposed factor $\varphi^{-N_*}$ of Section~\ref{sec:loop} holds, at
+ $N_* = d_{\rm opt} = 9$ it multiplies the logarithm by $\varphi^{-9} \approx 0.013$,
+ bringing it to about 2.1 nats. $\Delta S_{\rm tors}$ is therefore the
+-leading correction to the area law only if Gap~15 closes.  The Euclidean black-hole
+-background is a non-degenerate saddle point of the TMRB action — i.e.\ the
++leading correction to the area law only if Gap~15 closes.
++In Sen's analysis the logarithm arises from loops of massless fields and is
++fixed by low-energy data, with no higher-loop contribution ``by naive power counting''~\cite{Sen2012},
++so a loop-order suppression needs TMRB to depart from that framework, and closing Gap~15 is disfavoured by the cited analysis.
++The Euclidean black-hole
++background is assumed to be a non-degenerate saddle point of the TMRB action — i.e.\ the
+ second variation is positive-definite in the torsion sector.  Verifying this
+ for the full 11D gyroid compactification is an open item (see
+-Section~\ref{sec:gaps}, gap~3).
++Section~\ref{sec:gaps}, Gap~3).
+ 
+ \subsection{Comparison with Topological Entanglement Entropy}
+ 
+@@ -694,16 +696,13 @@
+ 
+ \subsection{Logarithmic Soft-Graviton Divergences}
+ 
+-Standard Weinberg soft-graviton loops produce logarithmic corrections to the
++One-loop contributions of massless fields~\cite{Sen2012} produce logarithmic corrections to the
+ entropy of the form
+ \begin{equation}
+   S^{(\log)}_{\mathrm{loop}} = c_{\log}\,\ln\!\frac{A}{G_4},
+   \label{eq:log_loop}
+ \end{equation}
+-where $c_{\log}$ is a pure number fixed by the massless field
+-content~\cite{Sen2012}.  These
+-corrections accumulate over Hawking radiation and could, in principle, displace an
+-$\mathcal{O}(1)$ amount of the information content~\cite{Sen2012}.
++where $c_{\log}$ is a pure number fixed by the massless field content.
+ 
+ \subsection{TMRB Exponential Cutoff}
+ 
+@@ -717,6 +716,7 @@
+ branching depth, without a UV cutoff and without supersymmetry. The factor is
+ carried over from the pre-v2 weight $\varphi^{-\lambda n}$; it does not follow from
+ the Gaussian weights Eq.~\eqref{eq:wn}, and deriving or replacing it is Gap~15.
++In Sen's analysis the log coefficient is fixed by low-energy data, with no higher-loop contribution ``by naive power counting''~\cite{Sen2012}, so a loop-order suppression needs TMRB to depart from that framework, and closing Gap~15 is disfavoured by the cited analysis.
+ 
+ \begin{conjecture}
+ The TMRB path integral is UV-finite for all loop orders in the soft-graviton
+@@ -764,10 +764,9 @@
+ 1987~\cite{GepnerQiu1987}) as the holographic dual on $S^2$ at $\mathscr{I}^+$.
+ On the thermal torus $\mathbb{T}^2 = S^1_\beta \times S^1$, adopting the
+ \emph{diagonal} modular invariant $M_{ab} = \delta_{ab}$, the partition function
+-factorises as
++is
+ \begin{equation}
+-  Z_{\mathrm{TMRB}}(\tau) = \sum_{a=0}^{8}|\chi_a(\tau)|^2
+-    \equiv |\chi_{\mathbb{Z}_9}(\tau)|^2,
++  Z_{\mathrm{TMRB}}(\tau) = \sum_{a=0}^{8}|\chi_a(\tau)|^2,
+   \label{eq:Z_torus}
+ \end{equation}
+ where $\chi_a(\tau)$ are the characters of the nine $\mathbb{Z}_9$ charge sectors and
+@@ -782,20 +781,17 @@
+ 
+ Modular invariance of Eq.~\eqref{eq:Z_torus} is a consistency condition, not a
+ proof of unitarity~\cite{DiFrancesco1997}; unitarity rests on the parafermion CFT
+-itself being unitary~\cite{GepnerQiu1987}. In the nine-sector reduction the
+-invariance holds because:
+-(a)~the nine torsion sectors are orthogonal (no off-diagonal terms from $\mathbb{Z}_9$
+-charge conservation); and (b)~the Gaussian weight Eq.~\eqref{eq:wn} is
++itself being unitary~\cite{GepnerQiu1987}. The diagonal invariant
++$\sum_a|\chi_a(\tau)|^2$ is invariant under any unitary modular $S$-matrix.
++(The nine torsion sectors are orthogonal, with no off-diagonal terms from $\mathbb{Z}_9$
++charge conservation.)  Separately, the Gaussian weight Eq.~\eqref{eq:wn} is
+ modular-\emph{covariant} (not merely invariant): under $\tau\to\tau+1$ each
+ character transforms as $\chi_a\to e^{2\pi i(h_a - c/24)}\chi_a$, and under
+ $\tau\to-1/\tau$ as $\chi_a\to \sum_b S_{ab}\chi_b$ where $S_{ab} = \frac{1}{3}e^{-2\pi iab/9}$
+ is the $S$-matrix of the nine-sector abelian reduction (the full parafermion
+-$S$-matrix acts on 45 characters; Gap~13).  The weights are left unchanged by the
+-same matrix, $w_n = \frac{1}{3}\sum_m w_m e^{-2\pi i mn/9}$, exactly for the
++$S$-matrix acts on 45 characters; Gap~13).  The weights have the fixed-point property
++$w_n = \frac{1}{3}\sum_m w_m e^{-2\pi i mn/9}$, exactly for the
+ periodised Gaussian Eq.~\eqref{eq:wn} (numerically to $10^{-15}$).
+-The holomorphic and anti-holomorphic sectors therefore transform with
+-\emph{matching} phases, ensuring $Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$ is
+-well-defined under all modular transformations.
+ 
+ \subsection{Firewalls and Remnants}
+ 
+@@ -825,10 +821,7 @@
+ size-independent term does not: at the endpoint
+ $S_{\mathrm{TMRB}} \to \Delta S_{\mathrm{tors}} \approx 20.9$ nats, that is
+ $9^9\cdot 3 = 3^{19} \approx 1.2\times10^{9}$ states. The construction therefore does
+-not exclude a Planck-scale relic. It does exclude an \emph{information-carrying}
+-remnant: a black hole that began with $S_{\mathrm{BH}} \gg 21$ nats cannot hand its
+-information to an object whose capacity is bounded by about 21 nats, so that
+-information must leave in the radiation. Whether the last $\Delta S_{\mathrm{tors}}$
++not exclude a Planck-scale relic. Information-carrying remnants would be excluded if the size-independent term bounds the endpoint capacity (the expansion is not valid as $A\to 0$; Gaps~14 and~15). Whether the last $\Delta S_{\mathrm{tors}}$
+ nats are radiated or remain is open (Gap~14).
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+@@ -981,16 +974,16 @@
+     all events. Pinned to revision r8 of this paper and to a frozen decision script,
+     identified by its SHA-256 hash; each input is labelled as computed or read from the
+     literature.
+-  \item \textbf{Criteria first.} Before any damping-time result was read (the sources
+-    were chosen from titles alone), the registration fixed the source order (GWTC-5.0,
++  \item \textbf{Criteria first.} The registration fixed the source order (GWTC-5.0,
+     then GWTC-4.0 remnant tests, then GWTC-3); the primary analysis (a common-deviation
+     combination of an inspiral--merger--ringdown analysis, mapped to a fit from the peak,
+-    which is the mapping most favourable to the prediction); four outcomes (EXCLUDED if the
++    which is the start time most favourable within Table~\ref{tab:ringdown_spin}); four outcomes (EXCLUDED if the
+     whole band lies outside the 90\% credible interval; DISFAVORED; CONSISTENT, NOT
+     DISCRIMINATING; FAVORED OVER GR); and what each outcome would mean for this paper.
+-  \item \textbf{Outside clock.} The registration was committed and pushed to GitHub
+-    (commit \texttt{76d92c7}, 16:06~UTC, 18 November 2026) before the source was opened.
+-    The transcribed numbers were committed (\texttt{d590909}) before the script ran.
++    That no damping-time result had been read at registration (the sources
++    were chosen from titles alone) is the registrant's statement.
++  \item \textbf{Outside clock.} The registration was pushed (16:05:56~UTC) before the transcribed input (16:06:45~UTC) and the run (16:07:20~UTC)
++    (commits \texttt{76d92c7}, \texttt{d590909} and the run, 18 November 2026). The push times establish order. That no result had been read at registration is the registrant's statement.
+   \item \textbf{Instrument, run once.} The frozen script compared the transcribed
+     intervals with the registered prediction, once. Failures stand.
+   \item \textbf{Human decision.} The author decided how this paper reports the outcome;
+@@ -1007,9 +1000,19 @@
+ data depart from GR, the damping time is longer, not shorter. Under the assumptions of
+ Gaps~17 and~18 the ringdown prediction is therefore disfavoured by published data. The
+ LIGO--Virgo--KAGRA waveform model is not the TMRB waveform, so the mapping is approximate;
+-it was fixed in advance as the one most favourable to the prediction. The registration,
++it was fixed in advance as the start time most favourable within Table~\ref{tab:ringdown_spin}.
++The primary verdict holds for any mapping that predicts a shortening (its lower bound is $+0.02$); the secondary verdicts depend on the mapping: with fit windows $\leq 1\tau$ the five-highest-SNR subset is CONSISTENT, NOT DISCRIMINATING.
++The registration,
+ transcribed input, frozen script, output and result record are included in the Zenodo
+ record.
++The six intervals used here, taken from GWTC-5.0 Tests of General Relativity
++(arXiv:2607.19293v1; PDF SHA-256
++\texttt{4ab5df879daa2f4acd2d9fac32e64f5daf78d8fddd73ba5d76ecc5a2047ab101}),
++were checked by a deterministic \texttt{pdftotext} extraction whose pass rules
++were fixed before the run. Four intervals matched the extracted text directly.
++The two stacked-error entries in Eq.~(22) were matched by text-position pairing
++and confirmed by George Bressler's visual check of the highlighted page.
++No other human verification of these intervals is claimed.
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{6\baselineskip}
+@@ -1019,8 +1022,9 @@
+ In the tradition of the TMRB series, the following gaps are documented honestly:
+ 
+ \begin{enumerate}[leftmargin=*, label=\arabic*.]
+-  \item \textbf{11D CDT extension (conjectured):} The TMRB path
+-    integral Eq.~\eqref{eq:Z} is well-defined in 4D CDT~\cite{AJL2004,AJL2005}.
++  \item \textbf{11D CDT extension (conjectured):} 4D CDT~\cite{AJL2004,AJL2005}
++    defines the pure-gravity sum over causal geometries; whether
++    Eq.~\eqref{eq:Z} is well-defined in 4D or 11D is open.
+     Its extension to 11D remains conjectured; no rigorous higher-dimensional
+     proof exists.
+   \item \textbf{Gyroid moduli corrections:} The KK mass spectrum uses a
+@@ -1040,7 +1044,8 @@
+     the horizon hair) remain to be worked out.
+   \item \textbf{Rindler membrane derivation (deferred):} The QNM sideband
+     spacing Eq.~\eqref{eq:sideband_spacing} of Section~\ref{sec:fluid_gravity} is
+-    derived from the discrete Regge--Wheeler potential at WKB order; a full
++    assumed (Gap~17); the spacing formula follows at WKB order \emph{given} a time-advancing modulation.
++    A full
+     membrane-paradigm derivation~\cite{Damour1978} of the horizon-fluid stress
+     tensor under the $\mathbb{Z}_9$ torsion identification --- including the
+     discrete Damour--Navier--Stokes equation and the implied $\mathbb{Z}_9$
+@@ -1112,6 +1117,7 @@
+     weights, and the weights alone give no suppression with loop order. Either
+     $\varphi^{-N_*}$ is derived, or a bound on diagram growth slower than
+     $3^{\ell}$ is shown.
++    In Sen's analysis the log coefficient is fixed by low-energy data, with no higher-loop contribution ``by naive power counting''~\cite{Sen2012}, so a loop-order suppression needs TMRB to depart from that framework, and closing this gap is disfavoured by the cited analysis.
+ 
+   \item \textbf{Observable for the entropy gap (open, added in v4):} No measurement
+     is identified that resolves a size-independent shift of about 21 nats.
+@@ -1135,15 +1141,17 @@
+ \section{Correlated Falsifiable Predictions}
+ \label{sec:predictions}
+ 
+-Table~\ref{tab:predictions} lists four predictions (the entropy gap has no observable yet) that are correlated through
+-$\eta_{\mathrm{diff}}$ and $G_4/G_{11}$.  Null model: $\eta_{\mathrm{null}} = 1.0\pm0.15$;
++Table~\ref{tab:predictions} lists four predictions: one already tested and excluded (ringdown damping time), two testable by $\sim$2030--2035, and the entropy gap with no observable yet.
++Amplitudes that depend on $\eta_{\mathrm{diff}}$ or $G_4/G_{11}$ are correlated through those parameters; the ringdown and entropy rows do not depend on $\eta_{\mathrm{diff}}$.
++Null model: $\eta_{\mathrm{null}} = 1.0\pm0.15$;
+ detection criterion: $>3\sigma$ above null over $\geq 3$ independent epochs.
++The $\eta_{\mathrm{null}}$ rule applies to the amplitude rows, not the ringdown rows.
+ 
+ \begin{table}[ht]
+ \centering
+-\caption{Correlated predictions from the TMRB soft-hair construction (three falsifiable near-term; the entropy gap has no observable yet).
+-All amplitudes normalised through the single Gaia DR3 anchor
+-$\eta_{\mathrm{diff}} = 0.82\pm0.02$ and $G_4/G_{11} = (5.214\pm0.12)\times10^{-40}$.}
++\caption{Four predictions from the TMRB soft-hair construction: one already tested and excluded (ringdown damping time), two testable by $\sim$2030--2035, and the entropy gap with no observable yet.
++Amplitudes that depend on $\eta_{\mathrm{diff}}$ are normalised with the assumed TMRB parameter
++$\eta_{\mathrm{diff}} = 0.82\pm0.02$ and $G_4/G_{11} = (5.214\pm0.12)\times10^{-40}$. The ringdown and entropy rows do not depend on $\eta_{\mathrm{diff}}$. The $\eta_{\mathrm{null}}$ rule applies to the amplitude rows, not the ringdown rows.}
+ \label{tab:predictions}
+ \begin{tabular}{p{3.0cm}p{5.0cm}p{3.3cm}l}
+ \toprule
+@@ -1160,9 +1168,10 @@
+   & Excluded (2026) \\
+ Ringdown shape
+   & Non-exponential decay; mismatch $6.0\times10^{-5}$ to a single mode,
+-    visible at ringdown SNR ${\gtrsim}\,90$ (44 at spin 0.7)
++    visible at ringdown SNR ${\gtrsim}\,90$ (44 at spin 0.7).
++    Same assumptions (Gaps~17--18) as the damping-time row; disfavoured by GWTC-5.0
+   & ET, CE (loudest events)
+-  & $\sim$2035 \\
++  & $\sim$2035 (conditional) \\
+ Black-hole entropy gap
+   & $S_{\mathrm{TMRB}} - S_{\mathrm{BH}} = c_{\log}\ln(A/G_4) + 9\ln 9 + \ln 3$;
+     constant part $\approx 20.874$
+@@ -1219,7 +1228,7 @@
+   \quad (95\%~\mathrm{CL}),
+   \label{eq:gwosc_ul}
+ \end{equation}
+-a factor of $\sim 39$ below the Gaia-calibrated prediction. The conversion
++a factor of $\sim 39$ below the TMRB prediction. The conversion
+ treats $\Delta g$ as a test-mass acceleration oscillating at $f_{\rm eff}\approx
+ 102$~Hz; under that assumption a signal at the predicted amplitude would lie
+ above the floor. The predicted anomaly is quasi-static (it is what GRACE and the
+@@ -1281,7 +1290,7 @@
+ \caption{Current and projected sensitivity for the predicted
+ $\Delta g_{\mathrm{TMRB}}=6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ bulk-gravity anomaly:
+ log-scale sensitivity of operational, planned and proposed missions; the gold band
+-marks the Gaia-calibrated TMRB prediction; dotted lines mark the GWOSC sensitivity
++marks the TMRB prediction; dotted lines mark the GWOSC sensitivity
+ floor Eq.~\eqref{eq:gwosc_ul} (applies only to a $\sim 100$~Hz component) and the
+ GRACE scale Eq.~\eqref{eq:grace_ul} (gravity of 1~cm of water). The v3 right panel, a
+ $z$-score histogram, was produced by a seeded random draw rather than taken from the
+@@ -1309,19 +1318,18 @@
+ 
+ The TMRB framework proposes a resolution of the black-hole information paradox
+ through three interconnected mechanisms.  First, the $\mathbb{Z}_9$ torsion structure of the
+-Schoen gyroid compactification provides nine soft-hair charge sectors per torsion
++Schoen gyroid compactification is proposed to provide nine soft-hair charge sectors per torsion
+ cell on the event horizon — one vacuum ($n=0$) and eight charged ($n=1,\ldots,8$)
+ — with total Hilbert space dimension $9^{N_{\mathrm{cell}}} = e^{S_{\mathrm{BH}}}$
+-(Eq.~\eqref{eq:N_hair}).  Second,
+-the modular-covariant Gaussian weights $w_n = C\exp(-\pi d(n)^2/9)$ generate, beyond the
+-one-loop logarithm, a universal size-independent torsion correction
+-$\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 3 \approx 20.874$
+-to the Bekenstein--Hawking entropy, where $9\ln 9 = \ln(9^9)$ is the nine-node
+-hair-lattice log-degeneracy and $\ln 3 = \ln Z_{\mathrm{tors}}$ is the Euclidean
+-boundary contribution.  Third, a proposed golden-ratio factor $\varphi^{-N_*}$ would
++(Eq.~\eqref{eq:N_hair}), which matches the area law by construction, given the cell area
++$A_{\mathrm{cell}} = 4G_4\ln 9$, which is not yet derived (Gap~8).  Second,
++the construction proposes a size-independent correction $9\ln 9 + \ln 3$, where
++$\ln 3 = \ln Z_{\mathrm{tors}}$ follows from the weights and $9\ln 9$ from counting the orbit once (Gap~12)
++($\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 3 \approx 20.874$).
++Third, a proposed golden-ratio factor $\varphi^{-N_*}$ would
+ exponentially suppress logarithmic soft-graviton loop corrections (Gap~15), while
+-holographic consistency is argued from torus partition function factorisation
+-$Z(\tau)=|\chi_{\mathbb{Z}_9}(\tau)|^2$.  Information-carrying remnants are excluded by a capacity bound; firewall
++holographic consistency is argued from the diagonal modular invariant
++$Z(\tau)=\sum_a|\chi_a(\tau)|^2$.  Information-carrying remnants would be excluded if the size-independent term bounds the endpoint capacity (the expansion is not valid as $A\to 0$; Gaps~14 and~15); firewall
+ avoidance and the full unitary map remain open (Gaps~10 and~11).
+ 
+ These results are not isolated: they are the direct UV extension of the same
+@@ -1340,9 +1348,7 @@
+ predicted bulk-gravity-leakage amplitude at the 45 hotspot
+ coordinates~\cite{BresslerBGL2026}, so GRACE cannot test it; the GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} applies to
+ a $\sim 100$~Hz component of it, and together they define the sensitivity floor for
+-next-generation instruments.  The entire TMRB series rests on a single
+-calibration anchor, $\eta_{\mathrm{diff}} = 0.82\pm0.02$ from Gaia
+-DR3~\cite{GaiaDR3}.
++next-generation instruments.  Amplitude predictions in the TMRB series use the assumed parameter $\eta_{\mathrm{diff}} = 0.82\pm0.02$; the ringdown and entropy results do not depend on this number.
+ 
+ The universe is a living 9/4-time symphony.  If Gaps~10 and~11 close, with
+ information conserved at the horizon, the score is complete.
+@@ -1506,12 +1512,6 @@
+   NASA Technical Note D-5541 (1970).
+   \href{https://ntrs.nasa.gov/citations/19700020472}{NTRS:19700020472}
+ 
+-\bibitem{GaiaDR3}
+-  Gaia Collaboration,
+-  \textit{Gaia Data Release 3: Summary of the content and survey properties},
+-  A\&A \textbf{674}, A1 (2023).
+-  \href{https://doi.org/10.1051/0004-6361/202243940}{doi:10.1051/0004-6361/202243940}
+-
+ \bibitem{GibbonsHawking1977}
+   G.~W.~Gibbons, S.~W.~Hawking,
+   \textit{Action integrals and partition functions in quantum gravity},
+@@ -1608,7 +1608,7 @@
+   G.~Bressler,
+   \textit{The Galactic Piano Is Still Ringing}, v4,
+   Zenodo (2026).
+-  \href{https://doi.org/10.5281/zenodo.19422604}{doi:10.5281/zenodo.19422604}
++  \href{https://doi.org/10.5281/zenodo.20262175}{doi:10.5281/zenodo.20262175}
+ 
+ \bibitem{BresslerQG2026}
+   G.~Bressler,

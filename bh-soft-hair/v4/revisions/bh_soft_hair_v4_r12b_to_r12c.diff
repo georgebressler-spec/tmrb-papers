@@ -1,0 +1,128 @@
+--- revisions/bh_soft_hair_v4_r12_pre_r12c_backup_2026-11-21.tex	2026-11-21 16:52:03.343437192 -0500
++++ bh_soft_hair_v4.tex	2026-11-21 16:52:29.829019151 -0500
+@@ -246,7 +246,7 @@
+   \item The horizon is proposed to carry nine quantised soft-hair charge sectors
+     per torsion cell from the $\mathbb{Z}_9$ torsion nodes (Section~\ref{sec:hair}; Gap~7).
+   \item The Bekenstein--Hawking entropy is proposed to receive, beyond the one-loop logarithm,
+-    a size-independent correction $\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 3 \approx 20.874$, where $\ln 3$ follows from the weights and $9\ln 9$ from counting the orbit once
++    a size-independent correction $\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 3 \approx 20.874$, where $\ln 3$ is the logarithm of the unit-prefactor boundary sum (a normalisation choice) and $9\ln 9$ from counting the orbit once
+     (Section~\ref{sec:entropy}; Gap~12).
+   \item A golden-ratio factor $\varphi^{-N_*}$ is proposed to suppress logarithmic
+     soft-graviton loop corrections (Section~\ref{sec:loop}); it is not yet derived
+@@ -343,7 +343,7 @@
+   \label{eq:etadiff}
+ \end{equation}
+ This value is not a Gaia DR3 measurement.\footnote{It first appears in Unified Framework v1.0 (DOI 10.5281/zenodo.19192990) as a plasma diffraction efficiency whose printed formula omits $dx$ and does not reproduce $0.82$. The uncertainty $\pm 0.02$ is not given there.}
+-The remaining parameters are derived or independently motivated (Table~\ref{tab:params}).
++The remaining parameters are taken from the companion papers (Table~\ref{tab:params}); $\lambda_{\rm rec}$, $\mu$ and $\kappa_{\rm prop}$ are fitted or chosen there, and $T_0$ is an input.
+ 
+ \begin{table}[ht]
+ \centering
+@@ -416,7 +416,7 @@
+ \end{align}
+ By Poisson summation, $\sum_{m\in\mathbb{Z}} e^{-\pi m^2/9} = 3\sum_{k\in\mathbb{Z}} e^{-9\pi k^2}$,
+ so $Z_{\rm tors} = 3$ to about $10^{-12}$; $3 = \sqrt{9}$ is also the total quantum
+-dimension of $\mathbb{Z}_9$ (Section~\ref{sec:entropy}). Through v3 the one-sided sum
++dimension of a nine-anyon abelian theory (Section~\ref{sec:entropy}). Through v3 the one-sided sum
+ was used, which gives 2 and $\ln 2$; it breaks $\mathbb{Z}_9$ conjugation and is withdrawn.
+ Here $\mathcal{S}_{\mathrm{tors}}$ is the Shannon entropy of the Gaussian weight
+ distribution; $\mathcal{H}_{\mathrm{hair}} = 9\ln 9$ is the log-degeneracy of
+@@ -476,13 +476,10 @@
+ \end{equation}
+ where $M_{\mathrm{Pl,11}}$ is the 11D Planck mass, $\theta_n = 2\pi n/9$ is
+ dimensionless, and $\eta_{\mathrm{diff}}$ is the assumed TMRB parameter that sets the charge normalisation.
+-The charges $Q^{(n)}$ carry dimensions of
+-$[\text{mass}]^3$ in natural units (equivalently, $[\text{length}]^{-3}$ with
+-$\hbar = c = 1$); this is the natural dimension of BMS supertranslation charges
+-in 11D — specifically the stress-energy flux integrated over the bifurcation
+-2-sphere times the 7D gyroid volume $V_7$, which upon dimensional reduction
+-gives $Q^{(n)} \sim M_{\mathrm{Pl,4}}$ after absorbing factors of $G_4/G_{11}$.
+-Equation~\eqref{eq:Q_super} has no free coefficient; that $Q^{(n=1)}$ then
++As written, $Q^{(n)}$ has dimension $[\text{mass}]^3$ in natural units, whereas BMS
++supertranslation charges are energies; the reduction that would relate $Q^{(n)}$ to a
++four-dimensional charge of order $M_{\mathrm{Pl,4}}$ is not derived here (Gap~2).
++Its normalisation is set by the assumed parameter $\eta_{\mathrm{diff}}$; that $Q^{(n=1)}$ then
+ matches the minimal KK mass scale of the gyroid compactification is a
+ consistency condition still to be checked (Gap~2).
+ The $n=0$ sector has $\theta_0 = 0$ and therefore $Q^{(0)} = 0$; it is the
+@@ -574,7 +571,12 @@
+   \label{eq:lnZ_tors}
+ \end{equation}
+ where $Z_{\mathrm{tors}} = \sum_{m\in\mathbb{Z}} \exp(-\pi m^2/9) = 3$ to about $10^{-12}$
+-(see Eq.~\eqref{eq:Z_tors_val}).  This term arises from integrating the torsion
++(see Eq.~\eqref{eq:Z_tors_val}).  The value $\ln 3$ uses the boundary sum with unit prefactor,
++$\sum_m e^{-\pi m^2/9}$; the normalised weights $w_n$ have $\sum_n w_n = 1$, so this
++normalisation is a choice. $\ln Z_{\rm tors}$ is an entropy contribution only if $Z_{\rm tors}$
++does not depend on $\beta$, since $S = (1-\beta\partial_\beta)\ln Z$; reading the exponent as
++$\beta E$ would instead give $\ln 3 + \tfrac12 \approx 1.599$. Both points are part of Gap~12.
++This term arises from integrating the torsion
+ $\mathbb{Z}_9$ modes over the Euclidean boundary $S^1_\beta \times S^2$ at
+ the horizon; it is independent of the area $A$ and additive to $\ln Z_{\rm grav}$.
+ 
+@@ -583,7 +585,7 @@
+ carries nine independent torsion states.  The $N_{\rm cell}$ cells are taken to be
+ independent; correlations at separation $r$ fall as $e^{-m_{\rm KK} r}$, which is not small at Planck separations unless $m_{\rm KK} \gtrsim 1/\ell_{\rm Pl}$, so independence is an assumption (Gap~2).  The degeneracy of the \emph{boundary}
+ sector — the nine-node torsion orbit at the horizon rather than the individual
+-Planck cells — is therefore
++Planck cells — is taken to be
+ \begin{equation}
+   \mathcal{H}_{\mathrm{hair}} = \ln(9^9) = 9\ln 9 \approx 19.775.
+   \label{eq:H_hair_sec4}
+@@ -651,8 +653,10 @@
+ corrections are size-independent; the torsion one is proposed to be topological in origin (Gap~12); the sign difference
+ reflects that Chern--Simons removes entanglement degeneracy while torsion hair
+ adds it.  The count $9^9 = 387{,}420{,}489$ is a number of states, not a quantum
+-dimension: a $\mathbb{Z}_9$ abelian topological order has total quantum dimension
+-$\mathcal{D} = \sqrt{9} = 3$ and $\gamma = \ln 3$~\cite{KitaevPreskill2006}. The
++dimension: an abelian topological order with nine anyons (for example the $\nu = 1/9$
++Laughlin state) has $\mathcal{D} = \sqrt{9} = 3$ and $\gamma = \ln 3$, whereas a
++$\mathbb{Z}_9$ gauge (Dijkgraaf--Witten) theory has 81 anyons, $\mathcal{D} = 9$ and
++$\gamma = \ln 9$~\cite{KitaevPreskill2006}. The
+ boundary term $\ln Z_{\rm tors} = \ln 3$ equals this $\gamma$ in magnitude with the
+ opposite sign; whether that is more than the shared $\sqrt{9}$ of Poisson
+ summation is open.
+@@ -661,8 +665,8 @@
+ 
+ The same $\mathbb{Z}_9$ structure that determines the horizon hair-lattice
+ log-degeneracy $\mathcal{H}_{\mathrm{hair}} = \ln(9^9) = 9\ln 9$ — and hence
+-the larger of the two size-independent terms in Eq.~\eqref{eq:S_TMRB} — also fixes
+-the galactic disk-wave period through
++the larger of the two size-independent terms in Eq.~\eqref{eq:S_TMRB} — also enters
++the galactic disk-wave model through
+ $\Delta\lambda = 2\pi/(9\kappa_{\mathrm{CE}}) = 1.7287$ and
+ $T_0 = (2\pi/\Delta\lambda)\,t_{\rm gal}$~\cite{BresslerGP2026}, where matching
+ $T_0 = 230$~Myr sets $t_{\rm gal} \approx 63.3$~Myr, so $T_0$ is an input here, not a
+@@ -1092,7 +1096,10 @@
+ 
+   \item \textbf{Orbit counting (open, added in v4):} The size-independent term
+     $9\ln 9$ follows from counting the nine-node orbit once; that count is a
+-    choice to be derived from the boundary path integral.
++    choice to be derived from the boundary path integral, and to show that it does not
++    double-count configurations already included in $9^{N_{\rm cell}}$. The $\ln 3$ term
++    likewise depends on the normalisation of the boundary sum and on $Z_{\rm tors}$ being
++    $\beta$-independent.
+ 
+   \item \textbf{Full parafermion partition function (open, added in v4):} The
+     $\mathbb{Z}_9$ parafermion theory has 45 primary fields; Eq.~\eqref{eq:Z_torus}
+@@ -1313,7 +1320,7 @@
+ (Eq.~\eqref{eq:N_hair}), which matches the area law by construction, given the cell area
+ $A_{\mathrm{cell}} = 4G_4\ln 9$, which is not yet derived (Gap~8).  Second,
+ the construction proposes a size-independent correction $9\ln 9 + \ln 3$, where
+-$\ln 3 = \ln Z_{\mathrm{tors}}$ follows from the weights and $9\ln 9$ from counting the orbit once (Gap~12)
++$\ln 3 = \ln Z_{\mathrm{tors}}$ is the logarithm of the unit-prefactor boundary sum (a normalisation choice) and $9\ln 9$ from counting the orbit once (Gap~12)
+ ($\Delta S_{\mathrm{tors}} = 9\ln 9 + \ln 3 \approx 20.874$).
+ Third, a proposed golden-ratio factor $\varphi^{-N_*}$ would
+ exponentially suppress logarithmic soft-graviton loop corrections; the cited analysis of Sen~\cite{Sen2012} disfavours such a suppression (Gap~15), while
+@@ -1476,9 +1483,9 @@
+ 
+ \bibitem{AJL2005}
+   J.~Ambjorn, J.~Jurkiewicz, R.~Loll,
+-  \textit{Spectral dimension of the universe in quantum gravity},
+-  Phys.\ Rev.\ D \textbf{72}, 064014 (2005).
+-  \href{https://doi.org/10.1103/PhysRevD.72.064014}{doi:10.1103/PhysRevD.72.064014}
++  \textit{The spectral dimension of the universe is scale dependent},
++  Phys.\ Rev.\ Lett.\ \textbf{95}, 171301 (2005).
++  \href{https://doi.org/10.1103/PhysRevLett.95.171301}{doi:10.1103/PhysRevLett.95.171301}
+ 
+ \bibitem{Vafa1986}
+   C.~Vafa,
