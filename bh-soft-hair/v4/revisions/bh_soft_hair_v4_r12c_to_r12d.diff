@@ -1,0 +1,14 @@
+--- /tmp/claude-0/-home-user/89a853b9-534a-596e-a20b-c031d7c9175a/scratchpad/r12c.tex	2026-11-25 15:39:11.028823739 +0000
++++ bh-soft-hair/v4/bh_soft_hair_v4.tex	2026-11-25 15:38:59.213685407 +0000
+@@ -326,8 +326,9 @@
+     consistency condition; imaginary $\tau$; quantum dimension 3; charges modulo $2\pi$;
+     footer DOI set to the concept DOI; references corrected and added; AI disclosure
+     updated to state Claude's role in v4.
+-  \item The full revision trail (r1--r11), audits, registration files and analysis scripts
+-    are included in the Zenodo record.
++  \item Registration files, analysis scripts and GitHub's push records are included in the
++    Zenodo record; the full revision trail (r1--r12c) and audits are in the public repository
++    \href{https://github.com/georgebressler-spec/tmrb-papers}{\texttt{github.com/georgebressler-spec/tmrb-papers}}.
+ \end{enumerate}
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
