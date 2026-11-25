@@ -1,0 +1,176 @@
+--- /tmp/claude-0/-home-user/89a853b9-534a-596e-a20b-c031d7c9175a/scratchpad/paper/bh_soft_hair_v4_r6.tex	2026-11-18 15:22:08.139107474 +0000
++++ /tmp/claude-0/-home-user/89a853b9-534a-596e-a20b-c031d7c9175a/scratchpad/paper/bh_soft_hair_v4_r7.tex	2026-11-18 15:34:40.088363761 +0000
+@@ -191,8 +191,9 @@
+ invoked here is conjectured; the framework is non-supersymmetric.  Four
+ correlated predictions are presented (three near-term falsifiable; the entropy gap
+ has no observable yet), together with
+-quantitative upper limits: a GRACE/GRACE-FO mascon search consistent with the
+-framework's predicted quasi-static bulk-gravity-leakage amplitude, and a GWOSC O3a
++two sensitivity scales: GRACE/GRACE-FO mascon gravity (about
++$4\times10^{-9}~\mathrm{m\,s^{-2}}$, roughly $10^{6}$ times above the framework's predicted
++quasi-static bulk-gravity-leakage amplitude), and a GWOSC O3a
+ narrowband sensitivity floor that lies below that amplitude but applies only to a
+ component near 100~Hz, which the prediction does not contain.
+ 
+@@ -336,6 +337,12 @@
+ \textit{(xiv)}~Sen's coefficient stated ($c_{\log} = 77/90$, pure gravity); the GWOSC result
+ relabelled as a sensitivity floor (recomputed from the run's measured noise level:
+ $1.602\times10^{-16}~\mathrm{m\,s^{-2}}$).
++\textit{(xv)}~GRACE paragraph rewritten from the 2026-04-26 run itself: its zero anomaly and
++$z$-scores follow from removing the fitted mean, so the run does not test the prediction;
++$4\times10^{-9}~\mathrm{m\,s^{-2}}$ is stated as the 1~cm water-equivalent scale, not an
++upper limit; the per-coordinate slope count and the coordinate-21 slope are withdrawn
++until the run is repeated; the synthetic $z$ histogram is removed from Fig.~5 and the
++run's own output is shown as Fig.~6.
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{6\baselineskip}
+@@ -1105,10 +1112,10 @@
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{8\baselineskip}
+-\subsection{Current Observational Constraints: GWOSC O3a Sensitivity Floor and GRACE-FO Null Results}
++\subsection{Current Observational Constraints: GWOSC O3a Sensitivity Floor and GRACE Scale}
+ \label{sec:current_constraints}
+ 
+-A sensitivity estimate (GWOSC) and a null search (GRACE) have been made against
++A sensitivity estimate (GWOSC) and a mascon run (GRACE) have been made against
+ existing data products, targeting the predicted bulk-gravity-leakage amplitude $\Delta g_{\mathrm{TMRB}} = 6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ at the
+ 45 $\mathbb{Z}_9$ hotspot coordinates inherited from~\cite{BresslerBGL2026}.
+ 
+@@ -1135,9 +1142,9 @@
+ \end{equation}
+ a factor of $\sim 39$ below the Gaia-calibrated prediction. The conversion
+ treats $\Delta g$ as a test-mass acceleration oscillating at $f_{\rm eff}\approx
+-102$~Hz; under that assumption the search excludes the predicted amplitude at
+-95\%~CL. The predicted anomaly is quasi-static (it is what the GRACE search and the
+-planned gradiometers look for) with no 30--174~Hz component, so this result bounds
++102$~Hz; under that assumption a signal at the predicted amplitude would lie
++above the floor. The predicted anomaly is quasi-static (it is what GRACE and the
++planned gradiometers measure) with no 30--174~Hz component, so this result bounds
+ a $\sim 100$~Hz component of $\Delta g$, not $\Delta g_{\rm TMRB}$ itself. This is the
+ conservative frequentist narrowband UL; tighter limits ($\sim 3\times10^{-17}$)
+ are obtainable under Bayesian priors with frequency-resolved ASD weighting,
+@@ -1146,30 +1153,36 @@
+ 
+ \paragraph{GRACE and GRACE-FO mascon gravity (2002-04 -- 2026-02).}
+ \sloppy
+-A 254-month z-score search over the JPL RL06.3M Mascon product
+-(\texttt{GRCTellus.JPL.200204\_202602.GLO.RL06.3M.MSCNv04CRI.nc}) executed on
+-2026-04-26 returns a clean null at all 45 hotspot coordinates: the sample
+-distribution of $z$-scores is consistent with $\mathcal{N}(0,1)$ ($|\bar z|
+-\approx 0.00$). (The per-coordinate residuals reported by the script,
+-$10^{-19}$--$10^{-18}~\mathrm{m\,s^{-2}}$, cannot be accelerations at the mascon
+-resolution that sets the limit below, nine orders higher; they are withheld
+-pending a re-check of the script.) The corresponding upper limit set by the
+-$\sim$300~km mascon point-spread function is
++On 2026-04-26 the JPL RL06.3M Mascon product
++(\texttt{GRCTellus.JPL.200204\_202602.GLO.RL06.3M.MSCNv04CRI.nc}) was searched at the
++45 hotspot coordinates (Figure~\ref{fig:grace_run}). At each coordinate the script
++fits and removes a mean, a linear trend and annual and semi-annual cycles, then
++reports the mean of the residual series as the anomaly, with its $z$-score. Because
++the fitted mean has been removed, both are zero by construction: the reported
++anomalies (${\sim}10^{-19}~\mathrm{m\,s^{-2}}$) and $|\bar z| \approx 0.00$ are
++rounding-level zeros, and a steady anomaly of any size would be removed in the same
++way. The run is therefore not a test of the prediction. What it does establish is
++the scale: the residual series vary at the centimetre level of water-equivalent
++height, and 1~cm of water corresponds to $2\pi G\rho_w h \approx
++4\times10^{-9}~\mathrm{m\,s^{-2}}$, so
+ \begin{equation}
+-  \Delta g_{\mathrm{TMRB}}^{\mathrm{GRACE}} < 4\times10^{-9}~\mathrm{m\,s^{-2}}
+-  \quad (95\%~\mathrm{CL}),
++  \Delta g^{\mathrm{GRACE}}_{\rm scale} \approx 4\times10^{-9}~\mathrm{m\,s^{-2}}
++  \quad (\text{1~cm water equivalent}),
+   \label{eq:grace_ul}
+ \end{equation}
+-a constraint dominated by spatial resolution rather than instrument
+-sensitivity.  Coordinate~21 (Ring~3, $+60^\circ,\,-60^\circ$) shows a
+-single-pixel PSD slope $\alpha=0.75$, exactly matching the TMRB target window
+-$0.75\pm0.05$; this is statistically insignificant in isolation
+-($n_{\mathrm{match}}=4/45$, mean $\bar\alpha = 0.692$ across the 45 sites)
+-but is logged for cross-correlation with future MAGIS-100 data.
++a sensitivity scale, not a computed upper limit. The prediction,
++$6.3\times10^{-15}~\mathrm{m\,s^{-2}}$, is the gravity of about $1.5\times10^{-6}$~cm
++of water, roughly $10^{6}$ times below it. The run also fitted a power-spectrum slope
++$\alpha$ at each coordinate; the distribution is bimodal
++(Figure~\ref{fig:grace_run}, bottom centre), with a mean near 0.7 read from the
++histogram. The run's per-coordinate table was not saved, so the slope count and the
++single-coordinate slope quoted in v3 are withdrawn until the run is repeated. A test
++of the prediction needs a method that keeps a steady offset (for example, hotspot
++against control coordinates) and an instrument about $10^{6}$ times more sensitive.
+ 
+ \paragraph{Interpretation.}
+-The GRACE-FO null is not in tension with the framework: the predicted
+-$6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ lies $\sim 6\times10^{5}$ times below its UL
++The GRACE run neither supports nor tests the framework: the predicted
++$6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ lies $\sim 6\times10^{5}$ times below the scale
+ Eq.~\eqref{eq:grace_ul}. The GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} lies $\sim 39$ times
+ \emph{below} the prediction; it is consistent with the framework only because it
+ bounds a $\sim 100$~Hz component that the quasi-static prediction does not have. If
+@@ -1179,30 +1192,37 @@
+ gradiometer at $\leq 10^{-17}~\mathrm{m\,s^{-2}}$, MAGIS-100 commissioning
+ 2027+, GRACE-C 2028+, ESA NGGM 2030s) and define the figure of merit at which
+ the framework becomes unambiguously falsifiable. Both analysis scripts
+-(\texttt{TMRB\_GWOSC\_torsion\_search.py} and
+-\texttt{TMRB\_GRACE\_torsion\_search.py}, operating on the identical
+-45-coordinate set) and full reproducibility metadata are included
+-in the Zenodo record for this paper.
++(\texttt{TMRB\_GWOSC\_torsion\_search.py} and the GRACE script used for the run,
++operating on the identical 45-coordinate set), the GWOSC result file and the GRACE
++run's output figure are included in the Zenodo record for this version.
+ 
+ \begin{figure}[ht!]
+ \centering
+-\includegraphics[width=0.94\textwidth]{fig5_constraints.pdf}
++\includegraphics[width=0.72\textwidth]{fig5_constraints.pdf}
+ \caption{Current and projected sensitivity for the predicted
+-$\Delta g_{\mathrm{TMRB}}=6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ bulk-gravity
+-anomaly. \textit{Left:} log-scale sensitivity bar of operational missions
+-(GRACE-FO, GWOSC O3a), planned missions (GRACE-C, ESA NGGM, AEDGE, MAQRO),
+-and the proposed Stanford quantum gravity gradiometer concept; the gold band
+-marks the Gaia-calibrated TMRB prediction; cyan crossbars show the existing
+-95\%~CL upper limits from \eqref{eq:gwosc_ul} and \eqref{eq:grace_ul}; the GWOSC
+-bar bounds only a $\sim 100$~Hz component of $\Delta g$ and does not exclude the
+-quasi-static prediction (Section~\ref{sec:current_constraints}).
+-\textit{Right:} histogram of $z$-scores across the 45 hotspot coordinates
+-from the 254-month GRACE-FO search, overlaid with the unit normal
+-distribution; the agreement is consistent with the clean-null verdict
+-$|\bar z|\approx 0.00$.}
++$\Delta g_{\mathrm{TMRB}}=6.3\times10^{-15}~\mathrm{m\,s^{-2}}$ bulk-gravity anomaly:
++log-scale sensitivity of operational, planned and proposed missions; the gold band
++marks the Gaia-calibrated TMRB prediction; dotted lines mark the GWOSC sensitivity
++floor Eq.~\eqref{eq:gwosc_ul} (applies only to a $\sim 100$~Hz component) and the
++GRACE scale Eq.~\eqref{eq:grace_ul} (gravity of 1~cm of water). The v3 right panel, a
++$z$-score histogram, was produced by a seeded random draw rather than taken from the
++run, and is removed.}
+ \label{fig:constraints}
+ \end{figure}
+ 
++\begin{figure}[ht!]
++\centering
++\includegraphics[width=\textwidth]{fig6_grace_run_2026-04-26.png}
++\caption{Output of the 2026-04-26 GRACE run on the real mascon product, reproduced
++unchanged with the run script's own panel titles. Each coordinate's series has its
++fitted mean, trend and seasonal cycles removed before its mean anomaly and $z$-score are
++computed, so both are zero by construction: the $z$-scores cluster at 0 (top right) and
++the ring means are 0 (bottom left; dashed line: the prediction). Bottom centre:
++power-spectrum slopes $\alpha$. Bottom right: the residual series at one coordinate,
++varying at the centimetre level.}
++\label{fig:grace_run}
++\end{figure}
++
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{6\baselineskip}
+ \section{Conclusion}
+@@ -1235,9 +1255,9 @@
+ the horizon QNM sideband spacing.  The resulting nine sidebands are too close to
+ resolve (0.094 line widths at any mass); their signature is a mass-independent
+ shortening of the ringdown damping time by about 5--10\%, the framework's most
+-direct gravitational-wave test at Einstein Telescope and Cosmic Explorer.  The GRACE-FO null limit Eq.~\eqref{eq:grace_ul} is consistent with the
++direct gravitational-wave test at Einstein Telescope and Cosmic Explorer.  The GRACE scale Eq.~\eqref{eq:grace_ul} lies about $10^{6}$ times above the
+ predicted bulk-gravity-leakage amplitude at the 45 hotspot
+-coordinates~\cite{BresslerBGL2026}, the GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} applies to
++coordinates~\cite{BresslerBGL2026}, so GRACE cannot test it; the GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} applies to
+ a $\sim 100$~Hz component of it, and together they define the sensitivity floor for
+ next-generation instruments.  The entire TMRB series rests on a single
+ calibration anchor, $\eta_{\mathrm{diff}} = 0.82\pm0.02$ from Gaia

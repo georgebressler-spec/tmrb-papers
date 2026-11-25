@@ -1,0 +1,77 @@
+--- bh_soft_hair_v4_r4.tex	2026-11-18 00:36:03.260242503 +0000
++++ bh_soft_hair_v4_r5.tex	2026-11-18 14:43:23.591201521 +0000
+@@ -329,6 +329,10 @@
+ closes. Smaller fixes: prediction count; Gap~5 (45 primaries); GRACE residuals withheld;
+ Fig.~3 and~5 captions; charges defined modulo $2\pi$; units of $G_4/G_{11}$; $T_0$ marked
+ as input; GWOSC segment contains no merger; Fateev--Zamolodchikov reference corrected.
++\textit{(xiii)}~Ringdown shift confirmed by three independent methods and stated for a fit
++from the peak, with its growth for later start times; the logarithm's dominance stated in
++magnitude ($|c_{\log}| > 0.114$); the GWOSC weights described as the script used them
++($n=-4,\dots,4$), and the 4531~s stated as the longest gap-free stretch of the 8192~s span.
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{6\baselineskip}
+@@ -621,7 +625,8 @@
+ as the total size-independent torsion correction.  The term
+ $c_{\log}\ln(A/G_4)$ is the standard one-loop logarithm, Eq.~\eqref{eq:log_loop},
+ with $c_{\log}$ a pure number of order one~\cite{Sen2012}; for a $10\,M_\odot$ hole
+-$\ln(A/G_4) \approx 183$, so it is of order $10^2$ nats and exceeds $\Delta S_{\rm tors}$.
++$\ln(A/G_4) \approx 183$, so it is of order $10^2$ nats and exceeds $\Delta S_{\rm tors}$ in magnitude
++whenever $|c_{\log}| > 0.114$ (its sign depends on the field content).
+ If the proposed factor $\varphi^{-N_*}$ of Section~\ref{sec:loop} holds, at
+ $N_* = d_{\rm opt} = 9$ it multiplies the logarithm by $\varphi^{-9} \approx 0.013$,
+ bringing it to about $2.4\,c_{\log}$ nats. $\Delta S_{\rm tors}$ is therefore the
+@@ -873,10 +878,14 @@
+ $h(t) \propto e^{-t/\tau}\cos(2\pi f_0 t)\sum_n w_n\cos(2\pi n\Delta f_{\rm tors} t)$:
+ the decay envelope picks up a mass-independent factor, equal to $0.975$ at $t = \tau$
+ ($2\pi\Delta f_{\rm tors}\tau = 2\kappa_{\rm CE}Q/9 \approx 0.19$). Fitting a single
+-damped sinusoid to this waveform returns the frequency unchanged and a damping
+-time \emph{4.6\% shorter} than the GR value for the same mass and spin, at every
+-mass. For a remnant of spin 0.7 ($Q \approx 3.3$ from the fits
+-of~\cite{BertiCardosoWill2006}) the shortening is 9.9\%. The residual mismatch
++damped sinusoid from the peak returns the frequency unchanged (to $0.2\%$) and a
++damping time \emph{4.6\% shorter} than the GR value for the same mass and spin, at
++every mass; three independent methods (complex overlap, real-strain least squares,
++small-$x$ expansion) give 4.4--4.8\%. The shift grows when the fit starts later,
++because the envelope factor falls faster with time: 7\%, 9.5\% and 13\% for starts
++at $0.5\tau$, $\tau$ and $2\tau$, so a measurement must quote its start time. For a
++remnant of spin 0.7 ($Q \approx 3.3$ from the fits of~\cite{BertiCardosoWill2006})
++the shortening from the peak is 9.9\% (9.7--11\% across methods). The residual mismatch
+ between the waveform and the best single mode is $6.0\times10^{-5}$
+ ($2.6\times10^{-4}$ at spin 0.7), so the non-exponential shape itself becomes
+ visible at ringdown signal-to-noise ratio $\rho \approx 90$ ($\approx 44$), from
+@@ -900,7 +909,7 @@
+ \textit{Bottom right:} predicted power spectrum with the true Schwarzschild
+ line width (FWHM $\approx 10.6\,\Delta f_{\rm tors}$, Eq.~\eqref{eq:comb_ratio}): the
+ nine sidebands (stems, heights $w_n$) blur into one line (cyan), close to a single
+-Kerr mode (gold, dashed); the fitted damping time is 4.6\% shorter.}
++Kerr mode (gold, dashed); fitted from the peak, the damping time is 4.6\% shorter.}
+ \label{fig:chladni}
+ \end{figure}
+ 
+@@ -1051,7 +1060,7 @@
+ Observable & Prediction & Instrument & Timeline \\
+ \midrule
+ Ringdown damping time
+-  & $\ell=m=2$ damping time 4.6\% shorter than GR (9.9\% at spin 0.7),
++  & $\ell=m=2$ damping time 4.6\% shorter than GR for a fit from the peak (9.9\% at spin 0.7; larger for later starts),
+     frequency unchanged, same fraction at every mass; from 9 unresolved
+     sidebands, spacing $0.094$ line widths, set by the $\kappa_{\rm CE}$ of the
+     celestial Mellin comb~\cite{BresslerCH2026,BresslerMellin2026}
+@@ -1100,13 +1109,13 @@
+ 
+ \paragraph{GWOSC O3a strain (H1, 2019-04-01).}
+ A coherent narrowband search for excess power in the predicted Z$_9$ QNM
+-sideband comb across 30--174~Hz was performed over 4531~s of
+-cleaned H1 strain within the 8192~s span GPS 1238163456--1238171648 (frame
++sideband comb across 30--174~Hz was performed over the longest gap-free stretch, 4531~s,
++of cleaned H1 strain in the 8192~s span GPS 1238163456--1238171648 (frame
+ \texttt{H1\_HOFT\_CLEAN\_SUB60HZ\_C01}). The script
+ \texttt{TMRB\_GWOSC\_torsion\_search.py} computes the Welch ASD with
+ 60/120~Hz mains excision (median ASD $\approx 6.3\times10^{-24}/\sqrt{\rm Hz}$
+ across the band), applies a coherent 9-line matched-filter stack against the
+-Gaussian Z$_9$ weights of v3, $C\exp(-\pi n^2/9)$ with $n=0,\dots,8$ (effective stack gain
++Gaussian Z$_9$ weights over $n=-4,\dots,4$, the symmetric form adopted in v4 (effective stack gain
+ $\sqrt{N_{\rm eff}} \approx 2.06$), and Bonferroni-corrects across the 45
+ templates. The segment contains no merger, so the search tests stationary lines at
+ the comb frequencies, not a ringdown. The resulting strain UL $h_0^{95\%} \approx 1.95\times10^{-25}$

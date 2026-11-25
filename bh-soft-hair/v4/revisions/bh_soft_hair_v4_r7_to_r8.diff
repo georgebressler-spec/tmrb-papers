@@ -1,0 +1,140 @@
+--- /tmp/claude-0/-home-user/89a853b9-534a-596e-a20b-c031d7c9175a/scratchpad/paper/bh_soft_hair_v4_r7.tex	2026-11-18 15:34:40.088363761 +0000
++++ /tmp/claude-0/-home-user/89a853b9-534a-596e-a20b-c031d7c9175a/scratchpad/paper/bh_soft_hair_v4_r8.tex	2026-11-18 15:59:07.276840173 +0000
+@@ -343,6 +343,10 @@
+ upper limit; the per-coordinate slope count and the coordinate-21 slope are withdrawn
+ until the run is repeated; the synthetic $z$ histogram is removed from Fig.~5 and the
+ run's own output is shown as Fig.~6.
++\textit{(xvi)}~Ringdown prediction stated as a function of remnant spin and fit start time
++(Table~\ref{tab:ringdown_spin}, exact Kerr frequencies): about 10--18\% for typical
++remnants, 4.4\% for a non-spinning remnant fitted from the peak; a comparison with
++existing LIGO--Virgo--KAGRA ringdown tests is proposed.
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+ \needspace{6\baselineskip}
+@@ -890,21 +894,51 @@
+ $h(t) \propto e^{-t/\tau}\cos(2\pi f_0 t)\sum_n w_n\cos(2\pi n\Delta f_{\rm tors} t)$:
+ the decay envelope picks up a mass-independent factor, equal to $0.975$ at $t = \tau$
+ ($2\pi\Delta f_{\rm tors}\tau = 2\kappa_{\rm CE}Q/9 \approx 0.19$). Fitting a single
+-damped sinusoid from the peak returns the frequency unchanged (to $0.2\%$) and a
+-damping time \emph{4.6\% shorter} than the GR value for the same mass and spin, at
+-every mass; three independent methods (complex overlap, real-strain least squares,
+-small-$x$ expansion) give 4.4--4.8\%. The shift grows when the fit starts later,
+-because the envelope factor falls faster with time: 7\%, 9.5\% and 13\% for starts
+-at $0.5\tau$, $\tau$ and $2\tau$, so a measurement must quote its start time. For a
+-remnant of spin 0.7 ($Q \approx 3.3$ from the fits of~\cite{BertiCardosoWill2006})
+-the shortening from the peak is 9.9\% (9.7--11\% across methods). The residual mismatch
++damped sinusoid returns the frequency unchanged (to $0.2\%$) and a damping time
++\emph{shorter} than the GR value for the same mass and spin. The shortening does not
++depend on mass, but it depends on the remnant's spin, through $Q$, and on the time
++$t_0$ after the peak at which the fit starts, because the envelope factor falls faster
++with time. Table~\ref{tab:ringdown_spin} gives it for exact Kerr $\ell = m = 2$
++frequencies (Leaver's continued fraction~\cite{Leaver1985}, computed with the
++\texttt{qnm} package~\cite{Stein2019}; the fits of~\cite{BertiCardosoWill2006} agree
++to $0.7\%$). For a non-spinning remnant fitted from the peak it is $4.4\%$ (three
++independent methods give 4.4--4.8\%). For a typical binary-merger remnant, of spin
++about 0.7, it is about $10\%$ from the peak and about $18\%$ from $t_0 = \tau$, where
++ringdown analyses usually start. The prediction is therefore a $10$--$18\%$
++shortening for typical remnants, and a measurement must state the remnant's spin and
++its fit start time.
++
++\begin{table}[ht]
++\centering
++\caption{Predicted shortening of the $\ell = m = 2$ damping time, from fitting a
++single damped sinusoid (least squares on the strain; free amplitude, phase, frequency
++and damping time) to the nine-sideband ringdown, by remnant spin and fit start time
++$t_0$ after the peak. Exact Kerr frequencies; the same at every mass. Assumes every
++sideband shares the damping time (Gap~18).}
++\label{tab:ringdown_spin}
++\begin{tabular}{cccccccc}
++\toprule
++Spin & $\omega_R M$ & $\omega_I M$ & $Q$ & $t_0 = 0$ & $t_0 = 0.5\tau$ & $t_0 = \tau$ & $t_0 = 2\tau$ \\
++\midrule
++0.00 & 0.3737 & 0.0890 & 2.10 & 4.4\%  & 7.0\%  & 9.5\%  & 12.9\% \\
++0.50 & 0.4641 & 0.0856 & 2.71 & 7.0\%  & 10.1\% & 13.5\% & 19.8\% \\
++0.69 & 0.5282 & 0.0812 & 3.25 & 9.5\%  & 14.0\% & 18.1\% & 25.3\% \\
++0.80 & 0.5860 & 0.0756 & 3.87 & 12.6\% & 19.0\% & 23.9\% & 31.4\% \\
++0.90 & 0.6716 & 0.0649 & 5.18 & 19.1\% & 27.0\% & 34.4\% & 44.2\% \\
++\bottomrule
++\end{tabular}
++\end{table}
++
++The residual mismatch
+ between the waveform and the best single mode is $6.0\times10^{-5}$
+ ($2.6\times10^{-4}$ at spin 0.7), so the non-exponential shape itself becomes
+ visible at ringdown signal-to-noise ratio $\rho \approx 90$ ($\approx 44$), from
+-$\rho^2(1-\mathcal{O}) \approx 1/2$. The testable prediction is therefore a
+-mass-independent shortening of the $\ell = m = 2$ damping time relative to the GR
+-value inferred from the inspiral, at the few-percent precision that
+-third-generation detectors target. (Computed; script \texttt{ringdown\_signature.py}
++$\rho^2(1-\mathcal{O}) \approx 1/2$. The testable prediction is a mass-independent
++shortening of the $\ell = m = 2$ damping time relative to the GR value inferred from
++the inspiral. A shortening of 10--18\% may already be within reach of combined
++ringdown tests of general relativity on existing LIGO--Virgo--KAGRA catalogues; such a
++comparison, set up in advance and run once, is proposed here, not claimed.
++(Computed; scripts \texttt{ringdown\_signature.py} and \texttt{kerr\_spin\_table.py}
+ in the Zenodo record.)
+ 
+ \begin{figure}[ht!]
+@@ -921,7 +955,8 @@
+ \textit{Bottom right:} predicted power spectrum with the true Schwarzschild
+ line width (FWHM $\approx 10.6\,\Delta f_{\rm tors}$, Eq.~\eqref{eq:comb_ratio}): the
+ nine sidebands (stems, heights $w_n$) blur into one line (cyan), close to a single
+-Kerr mode (gold, dashed); fitted from the peak, the damping time is 4.6\% shorter.}
++Kerr mode (gold, dashed); for this non-spinning case, fitted from the peak, the
++damping time is 4.4--4.8\% shorter (spinning remnants: Table~\ref{tab:ringdown_spin}).}
+ \label{fig:chladni}
+ \end{figure}
+ 
+@@ -1048,8 +1083,8 @@
+ 
+   \item \textbf{Sideband damping and spin (open, added in v4):} The ringdown
+     numbers of Section~\ref{sec:fluid_gravity} assume every sideband shares the
+-    $\ell = m = 2$ damping time, and are computed for Schwarzschild and, with fit
+-    formulas, spin 0.7. A Kerr derivation including overtones is open.
++    $\ell = m = 2$ damping time; they use exact Kerr frequencies for spins 0--0.9
++    (Table~\ref{tab:ringdown_spin}). Unequal sideband damping and overtones are open.
+ \end{enumerate}
+ 
+ % ─────────────────────────────────────────────────────────────────────────────
+@@ -1072,8 +1107,9 @@
+ Observable & Prediction & Instrument & Timeline \\
+ \midrule
+ Ringdown damping time
+-  & $\ell=m=2$ damping time 4.6\% shorter than GR for a fit from the peak (9.9\% at spin 0.7; larger for later starts),
+-    frequency unchanged, same fraction at every mass; from 9 unresolved
++  & $\ell=m=2$ damping time shorter than GR: about 10\% from the peak and 18\% from
++    $t_0 = \tau$ for a typical remnant spin of 0.7 (4.4\% with no spin;
++    Table~\ref{tab:ringdown_spin}); frequency unchanged, same at every mass; from 9 unresolved
+     sidebands, spacing $0.094$ line widths, set by the $\kappa_{\rm CE}$ of the
+     celestial Mellin comb~\cite{BresslerCH2026,BresslerMellin2026}
+     (Section~\ref{sec:fluid_gravity}, Figure~\ref{fig:chladni})
+@@ -1254,7 +1290,8 @@
+ that governs the celestial conformal-weight comb at $\mathscr{I}^+$ also fixes
+ the horizon QNM sideband spacing.  The resulting nine sidebands are too close to
+ resolve (0.094 line widths at any mass); their signature is a mass-independent
+-shortening of the ringdown damping time by about 5--10\%, the framework's most
++shortening of the ringdown damping time by about 10--18\% for typical remnants
++(Table~\ref{tab:ringdown_spin}), the framework's most
+ direct gravitational-wave test at Einstein Telescope and Cosmic Explorer.  The GRACE scale Eq.~\eqref{eq:grace_ul} lies about $10^{6}$ times above the
+ predicted bulk-gravity-leakage amplitude at the 45 hotspot
+ coordinates~\cite{BresslerBGL2026}, so GRACE cannot test it; the GWOSC sensitivity floor Eq.~\eqref{eq:gwosc_ul} applies to
+@@ -1469,6 +1506,19 @@
+   \href{https://doi.org/10.1007/JHEP04(2013)156}{doi:10.1007/JHEP04(2013)156}
+   \href{https://arxiv.org/abs/1205.0971}{[arXiv:1205.0971]}
+ 
++\bibitem{Leaver1985}
++  E.~W.~Leaver,
++  \textit{An analytic representation for the quasi-normal modes of Kerr black holes},
++  Proc.\ R.\ Soc.\ Lond.\ A \textbf{402}, 285 (1985).
++  \href{https://doi.org/10.1098/rspa.1985.0119}{doi:10.1098/rspa.1985.0119}
++
++\bibitem{Stein2019}
++  L.~C.~Stein,
++  \textit{qnm: A Python package for calculating Kerr quasinormal modes, separation
++    constants, and spherical-spheroidal mixing coefficients},
++  J.\ Open Source Softw.\ \textbf{4}, 1683 (2019).
++  \href{https://doi.org/10.21105/joss.01683}{doi:10.21105/joss.01683}
++
+ \bibitem{BertiCardosoWill2006}
+   E.~Berti, V.~Cardoso, C.~M.~Will,
+   \textit{On gravitational-wave spectroscopy of massive black holes with the space

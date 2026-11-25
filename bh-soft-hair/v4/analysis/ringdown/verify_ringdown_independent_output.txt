@@ -1,0 +1,10 @@
+Schwarzschild: Q=2.100  2pi*df*tau=0.1885  (A) analytic tau shortening = 0.0484
+    (B) fit from t0=0.0 tau: tau_fit/tau-1 = -0.0439   f_fit/f0-1 = -6.35e-04
+    (B) fit from t0=0.5 tau: tau_fit/tau-1 = -0.0697   f_fit/f0-1 = +1.62e-03
+    (B) fit from t0=1.0 tau: tau_fit/tau-1 = -0.0949   f_fit/f0-1 = -4.86e-04
+    (B) fit from t0=2.0 tau: tau_fit/tau-1 = -0.1294   f_fit/f0-1 = +1.65e-03
+Kerr j=0.7 (BCW fits): Q=3.287  2pi*df*tau=0.2950  (A) analytic tau shortening = 0.1108
+    (B) fit from t0=0.0 tau: tau_fit/tau-1 = -0.0968   f_fit/f0-1 = -1.06e-03
+    (B) fit from t0=0.5 tau: tau_fit/tau-1 = -0.1427   f_fit/f0-1 = -1.24e-03
+    (B) fit from t0=1.0 tau: tau_fit/tau-1 = -0.1846   f_fit/f0-1 = -1.33e-03
+    (B) fit from t0=2.0 tau: tau_fit/tau-1 = -0.2579   f_fit/f0-1 = -1.24e-03
