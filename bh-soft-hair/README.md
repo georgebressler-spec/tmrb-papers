@@ -1,11 +1,13 @@
-# TMRB Soft-Hair Resolution of the Black-Hole Information Paradox
+# A Proposed TMRB Soft-Hair Resolution of the Black-Hole Information Paradox
 
-Paper 10 of the PTRH series. Concept DOI: [10.5281/zenodo.19981840](https://doi.org/10.5281/zenodo.19981840).
+Paper 10 of the PTRH series. Concept DOI (always the latest version): [10.5281/zenodo.19981840](https://doi.org/10.5281/zenodo.19981840).
+
+**v4 is published:** [10.5281/zenodo.24565524](https://doi.org/10.5281/zenodo.24565524) (Zenodo record [24565524](https://zenodo.org/records/24565524), 26 Nov 2026), from revision r14 in this repository. Its files (the paper, the supporting files, the X24si process record and `MANIFEST.md`) were checked against the manifest after publication: all four match. v4 is the first application of the X24si method to a research paper; it reports its own ringdown prediction refuted by a pre-registered test (`v4/prereg/`).
 
 | Folder | What it is |
 |---|---|
 | `v3/` | The published v3, as downloaded from Zenodo record 20331456 (May 21 2026): LaTeX source, PDF, and figure scripts with their outputs. |
-| `v4/` | v4 (revision r14, Nov 26 2026), not yet on Zenodo: `bh_soft_hair_v4.tex` and `.pdf`. |
+| `v4/` | v4 (revision r14), published on Zenodo 26 Nov 2026 as [10.5281/zenodo.24565524](https://doi.org/10.5281/zenodo.24565524): `bh_soft_hair_v4.tex` and `.pdf`. |
 | `v4/figures/` | Figures 1–6. Figures 1, 2, 4 and 5 were regenerated from the v3 scripts, as patched in v4. Fig. 6 is the unchanged output image of the 2026-04-26 GRACE run. |
 | `v4/analysis/ringdown/` | `ringdown_signature.py` and `kerr_spin_table.py` (both cited in the paper, §7), and an independent cross-check, `verify_ringdown_independent.py`, each with its output. |
 | `v4/analysis/gwosc/` | The LIGO/GWOSC sensitivity-floor script and its saved result (`results_gwosc_o3a.json`). |
