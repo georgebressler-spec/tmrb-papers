@@ -1,0 +1,14 @@
+v4 r12: apply author-adopted review refinements and log reviewer proposals
+
+- Add dual citations ([22, 37]) for Gaia DR3 phase-spiral calibration
+  eta_diff = 0.82 +/- 0.02 and distinguish dimensional amplitudes from
+  (9, kappa_CE) dimensionless ratios (Abstract, Sec. 2.1, Table 3).
+- Fix dimensional-reduction scaling wording for Q_super^(n) in Sec. 3.1
+  (dividing by V_7^(2/7) = (G_4/G_11)^(-2/7)).
+- Note exact Z_9 Poisson-summation invariance of w_n in Sec. 6.1 and
+  annotate chi = 0 on the 30 M_sun (402 Hz) benchmark in Sec. 7 / Fig. 4.
+- Clarify pSEOBNRv5PHM IMR vs. time-domain least-squares mapping scope in
+  Sec. 7.1 and note human transcription verification in the Zenodo audit trail.
+- Relabel Eq. (21) LHS as narrowband sensitivity floor Delta g_floor^95%.
+- Update AI disclosure, v4 revision trail (r12), GRACE README note, and
+  v4/review/REVIEW_LOG.md.
